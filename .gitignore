@@ -1,0 +1,30 @@
+# MacOS .DS_Store files
+**/.DS_Store
+
+# VS Code
+/.vscode
+
+# Auxiliary files when compiling LaTeX
+tex/*.aux
+tex/*.bbl
+tex/*.bcf
+tex/*.blg
+tex/*.fdb_latexmk
+tex/*.fls
+tex/*.log
+tex/*.out
+tex/*.run.xml
+tex/*.synctex.gz
+tex/*.toc
+tex/*.idx
+tex/*.ind
+tex/*.ilg
+
+# Generated PDF
+/tex/*.pdf
+
+# Jupyter Book
+/book
+
+# Python
+**/__pycache__
