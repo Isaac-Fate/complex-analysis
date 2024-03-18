@@ -1,0 +1,539 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>2.1. Cauchy’s Integral Formula &#8212; Complex Analysis</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"AC": "\\mathcal{A}", "BC": "\\mathcal{B}", "C": "\\mathbb{C}", "CC": "\\mathcal{C}", "DC": "\\mathcal{D}", "EC": "\\mathcal{E}", "F": "\\mathbb{F}", "FC": "\\mathcal{F}", "GC": "\\mathcal{G}", "HC": "\\mathcal{H}", "MC": "\\mathcal{M}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "PC": "\\mathcal{P}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "RE": ["\\mathrm{Re}"], "SC": "\\mathcal{S}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "brk": ["\\left( #1 \\right)", 1], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "dif": "\\, \\mathrm{d}", "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "proj": ["\\mathop{\\mathrm{proj}}"], "restr": ["{#1}|_{#2}", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="References" href="../references.html" />
+    <link rel="prev" title="2. Cauchy’s Theorem and Its Applications" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Complex Analysis</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Preface
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Main Contents
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Point-Set%20Topology/index.html">
+   1. Point-Set Topology
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Point-Set%20Topology/Preimages.html">
+     1.1. Preimages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   2. Cauchy’s Theorem and Its Applications
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2.1. Cauchy’s Integral Formula
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../references.html">
+   References
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../genindex.html">
+   Index
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/Isaac-Fate/complex-analysis"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/Isaac-Fate/complex-analysis/issues/new?title=Issue%20on%20page%20%2FCauchy's Theorem and Its Applications/Cauchy's Integral Formula.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Cauchy's Theorem and Its Applications/Cauchy's Integral Formula.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Cauchy’s Integral Formula</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="cauchy-s-integral-formula">
+<h1><span class="section-number">2.1. </span>Cauchy’s Integral Formula<a class="headerlink" href="#cauchy-s-integral-formula" title="Permalink to this headline">#</a></h1>
+<div class="proof theorem admonition" id="thm:11">
+<p class="admonition-title"><span class="caption-number">Theorem 2.1 </span> (Liouville’s Theorem)</p>
+<section class="theorem-content" id="proof-content">
+<p>TODO</p>
+</section>
+</div><div class="proof theorem admonition" id="thm:12">
+<p class="admonition-title"><span class="caption-number">Theorem 2.2 </span> (Fundamental Theorem of Algebra)</p>
+<section class="theorem-content" id="proof-content">
+<p>Every polynomial with degree greater than <span class="math notranslate nohighlight">\(0\)</span> with complex coefficients has a
+root in <span class="math notranslate nohighlight">\(\C\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let polynomial <span class="math notranslate nohighlight">\(p(z)\)</span> be given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+p(z) = a_n z^n + \cdots a_1 z + a_0
+\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(n \geq 1\)</span> and <span class="math notranslate nohighlight">\(a_n \neq 0\)</span>.
+We shall prove by contradiction.
+Assume <span class="math notranslate nohighlight">\(p(z)\)</span> has no roots in <span class="math notranslate nohighlight">\(\C\)</span>. Then the reciprocal <span class="math notranslate nohighlight">\(1 / p(z)\)</span> is defined on the entire
+complex plane.
+Moreover, the derivative of <span class="math notranslate nohighlight">\(1 / p(z)\)</span> clearly exists everywhere.
+Therefore, <span class="math notranslate nohighlight">\(1 / p(z)\)</span> is entire.
+We will use Liouville’s theorem to establish a contradiction.
+To do so, we are going to show <span class="math notranslate nohighlight">\(1 / p(z)\)</span> is bounded.</p>
+<p>We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\frac{p(z)}{z^n} = a_n + \frac{a_{n-1}}{z} + \cdots + \frac{a_1}{z^{n-1}} + \frac{a_0}{z^n}\end{align*}\]</div>
+<p>Note that when <span class="math notranslate nohighlight">\(\abs{z} \to \infty\)</span>, the modulus of the quotient <span class="math notranslate nohighlight">\(p(z) / z^n\)</span> will
+tend to <span class="math notranslate nohighlight">\(\abs{a_n}\)</span>.
+This implies that there exists <span class="math notranslate nohighlight">\(R &gt; 0\)</span> such that</p>
+<div class="math notranslate nohighlight" id="equation-eq-55">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-eq-55" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{\frac{p(z)}{z^n}} &gt; \frac{\abs{a_n}}{2}\end{align}\]</div>
+<p>whenever <span class="math notranslate nohighlight">\(\abs{z} &gt; R\)</span>. Rearranging <a class="reference internal" href="#equation-eq-55">(2.1)</a>, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{\frac{1}{p(z)}} &lt; \frac{2}{\abs{a_n}}\cdot\frac{1}{\abs{z}^n} &lt; \frac{2}{\abs{a_n} R^n}\quad\text{if }\abs{z} &gt; R
+\end{align*}\]</div>
+<p>The above inequality shows <span class="math notranslate nohighlight">\(1 / p(z)\)</span> is bounded outside the disk <span class="math notranslate nohighlight">\(D\)</span> centered
+at <span class="math notranslate nohighlight">\(0\)</span> with radius <span class="math notranslate nohighlight">\(R\)</span>.</p>
+<p>For points inside the closed disk <span class="math notranslate nohighlight">\(\overline{D}\)</span>, since function <span class="math notranslate nohighlight">\(\abs{1 / p(z)}\)</span> is
+continuous and <span class="math notranslate nohighlight">\(\overline{D}\)</span> is compact, <span class="math notranslate nohighlight">\(\abs{1 / p(z)}\)</span> attains its maximum <span class="math notranslate nohighlight">\(M\)</span> on <span class="math notranslate nohighlight">\(\overline{D}\)</span>.</p>
+<p>Therefore, we see that <span class="math notranslate nohighlight">\(1 / p(z)\)</span> is indeed bounded on entire complex plane <span class="math notranslate nohighlight">\(\C\)</span>.
+By Liouville’s theorem <a class="reference internal" href="#thm:11">Theorem 2.1</a>, <span class="math notranslate nohighlight">\(1 / p(z)\)</span> is constant, which leads to a
+contradiction since polynomials with degree greater than <span class="math notranslate nohighlight">\(0\)</span> are non-constant.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The last assertion that polynomials with degree greater than <span class="math notranslate nohighlight">\(0\)</span> are
+non-constant seem evident. But the reader should still prove it. See <a class="reference internal" href="#pro:4">Proposition 2.1</a>.
+And the proof is not that trivial.</p>
+</div>
+</div>
+<div class="proof proposition admonition" id="pro:4">
+<p class="admonition-title"><span class="caption-number">Proposition 2.1 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>Polynomials with degree greater than <span class="math notranslate nohighlight">\(0\)</span> are non-constant.</p>
+</section>
+</div><p>Now, we have proved polynomial <span class="math notranslate nohighlight">\(p(z)\)</span> must have one root. Using mathematical
+induction we can show that it actually has <span class="math notranslate nohighlight">\(n\)</span> roots, and can be factorized as</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+p(z) = a_n (z^n - z_1) (z^n - z_2) \cdots(z^n - z_n)
+\end{align*}\]</div>
+<div class="proof corollary admonition" id="corollary-3">
+<p class="admonition-title"><span class="caption-number">Corollary 2.1 </span></p>
+<section class="corollary-content" id="proof-content">
+<p>Every polynomial <span class="math notranslate nohighlight">\(p(z) = a_n z^n + \cdots + a_1 z + a_0\)</span> of degree <span class="math notranslate nohighlight">\(n \geq 1\)</span> with
+complex coefficients has exactly <span class="math notranslate nohighlight">\(n\)</span> roots in <span class="math notranslate nohighlight">\(\C\)</span>. If these <span class="math notranslate nohighlight">\(n\)</span> roots are
+denoted by <span class="math notranslate nohighlight">\(z_1, \ldots, z_n\)</span>, then <span class="math notranslate nohighlight">\(p(z)\)</span> can be factorized as</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+p(z) = a_n (z^n - z_1) (z^n - z_2) \cdots(z^n - z_n)
+\end{align*}\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We shall prove by induction.</p>
+<p><strong>Base Case:</strong> Suppose <span class="math notranslate nohighlight">\(n = 1\)</span>, then <span class="math notranslate nohighlight">\(p(z) = a_1 z + a_0\)</span>(<span class="math notranslate nohighlight">\(a_1 \neq 0\)</span>). Setting <span class="math notranslate nohighlight">\(p(z) = 0\)</span>, we solve that <span class="math notranslate nohighlight">\(z = -a_0 / a_1\)</span>. Therefore, <span class="math notranslate nohighlight">\(z_1 = -a_0 / a_1\)</span> is the only root of <span class="math notranslate nohighlight">\(p(z)\)</span>, and we can write <span class="math notranslate nohighlight">\(p(z) = a_1(z - z_1)\)</span>.</p>
+<p><strong>Inductive Step:</strong> Assume this corollary holds for <span class="math notranslate nohighlight">\(n = k\)</span>, we need to show that it also holds for <span class="math notranslate nohighlight">\(n = k + 1\)</span>.
+By the Fundamental Theorem of Algebra <a class="reference internal" href="#thm:12">Theorem 2.2</a>, there exists one root <span class="math notranslate nohighlight">\(z_1\)</span> for <span class="math notranslate nohighlight">\(p(z)\)</span>.
+We want to show that <span class="math notranslate nohighlight">\(p(z)\)</span> has a factor <span class="math notranslate nohighlight">\((z - z_1)\)</span>.
+Let <span class="math notranslate nohighlight">\(\tilde{p}(z) = p(z + z_1)\)</span>.
+Note that <span class="math notranslate nohighlight">\(\tilde{p}(z)\)</span> is also a polynomial of degree <span class="math notranslate nohighlight">\(k + 1\)</span>.
+Write</p>
+<div class="math notranslate nohighlight" id="equation-eq-56">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-eq-56" title="Permalink to this equation">#</a></span>\[\begin{align}\tilde{p}(z) = b_{k+1} z^{k+1} + \cdots + b_1 z + b_0
+\end{align}\]</div>
+<p>Because <span class="math notranslate nohighlight">\(z_1\)</span> is a root of <span class="math notranslate nohighlight">\(p(z)\)</span>, we have <span class="math notranslate nohighlight">\(\tilde{p}(0) = p(z_1) = 0\)</span>. Substituting <span class="math notranslate nohighlight">\(z=0\)</span> into <a class="reference internal" href="#equation-eq-56">(2.2)</a> yields <span class="math notranslate nohighlight">\(b_0 = 0\)</span>.
+Therefore, we can write</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\tilde{p}(z) = z (b_{k+1} z^{k} + \cdots b_2 z + b_1)
+\end{align*}\]</div>
+<p>Then, we recover the expression of <span class="math notranslate nohighlight">\(p(z)\)</span> from <span class="math notranslate nohighlight">\(\tilde{p}(z)\)</span>.
+Note that <span class="math notranslate nohighlight">\(p(z) = \tilde{p}(z - z_1)\)</span>.
+Hence,</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+p(z) = (z - z_1) \underbrace{(b_{k+1} z^{k} + \cdots b_2 z + b_1)}_{\text{a polynomial of degree $k$}}
+= (z - z_1) q(z)
+\end{align*}\]</div>
+<p>Now, we may apply the induction hypothesis on <span class="math notranslate nohighlight">\(q(z)\)</span>.
+We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+p(z) &amp; = (z - z_1) [c (z - z_2) \cdots(z - z_{k+1})]\\&amp; = c (z - z_1) \cdots(z - z_{k+1})
+\end{align*}\end{split}\]</div>
+<p>And we realized that <span class="math notranslate nohighlight">\(c\)</span> is exactly <span class="math notranslate nohighlight">\(a_{k+1}\)</span> since it is the coefficient of <span class="math notranslate nohighlight">\(z^{k+1}\)</span>.
+Therefore, we have shown</p>
+<div class="math notranslate nohighlight" id="equation-eq-57">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-eq-57" title="Permalink to this equation">#</a></span>\[\begin{align}
+p(z) = a_{k+1}(z - z_1) \cdots(z - z_{k+1})
+\end{align}\]</div>
+<p><a class="reference internal" href="#equation-eq-57">(2.3)</a> tells us that <span class="math notranslate nohighlight">\(z_1, \ldots, z_{k+1}\)</span> are roots of <span class="math notranslate nohighlight">\(p(z)\)</span>.
+Moreover, <span class="math notranslate nohighlight">\(p(z)\)</span> cannot have any other roots. To see this, suppose <span class="math notranslate nohighlight">\(w \neq z_j \\forall j=1, \ldots, k+1\)</span>. Then, substituting <span class="math notranslate nohighlight">\(z = w\)</span> in <a class="reference internal" href="#equation-eq-57">(2.3)</a>, we see that <span class="math notranslate nohighlight">\(p(w) \neq 0\)</span> since each factor is nonzero.</p>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "Isaac-Fate/complex-analysis",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Cauchy's Theorem and Its Applications"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>Cauchy’s Theorem and Its Applications</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../references.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">References</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Isaac FEI<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
