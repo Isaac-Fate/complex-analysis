@@ -64,6 +64,16 @@ In other words,
 
 \section{Cauchy's Integral Formula}
 
+\begin{theorem} \label{thm:13}
+    Suppose $f$ is holomorphic in an open set $\Omega$, and $D$ is an open disk
+    centered at $z_0$ whose closure is contained in $\Omega$. Then $f$ has a power
+    series expansion at $z_0$ in the form
+    \begin{align}
+        f(z) = \sum_{n=0}^\infty \frac{f^{(n)}(z_0)}{n!}  (z - z_0)^n \quad \forall z \in D
+        \label{eq:45}
+    \end{align}
+\end{theorem}
+
 \begin{theorem}[Liouville's Theorem] \label{thm:11}
     % TODO
 \end{theorem}
@@ -182,6 +192,30 @@ induction we can show that it actually has $n$ roots, and can be factorized as
     Moreover, $p(z)$ cannot have any other roots. To see this, suppose $w \neq z_j \ \forall j=1, \ldots, k+1$. Then, substituting $z = w$ in \eqref{eq:57}, we see that $p(w) \neq 0$ since each factor is nonzero.
 \end{proof}
 
+
+The next theorem roughly demonstrates that the global behaviour of a holomorphic function is determined by its values on an appropriate small subset.
+
+\begin{theorem}
+    If $f$ is a holomorphic function in a connected open set $\Omega$, and vanishes on a sequence of distinct points whose limit is also in $\Omega$, then $f$ is constantly zero in $\Omega$.
+
+    In other words, let $f$ be a holomorphic function in a connected open set $\Omega$.
+    Suppose $\{z_n\}_{n \in \Z^+}$ is a sequence of distinct points in $\Omega$, and it converges to $z_0 \in \Omega$. If $f(z_n) = 0$ for all $n$ and $f(z_0) = 0$, then $f(z) = 0$ for all $z \in \Omega$.
+\end{theorem}
+
+At a first glance, this result seems magical and almost unrealistic.
+How can the value of a function vanishes in the entire set only because it vanishes on a sequence of distinct points?
+
+And when we work on a proof, where should we start?
+The key point of this proof is by exploiting the fact that $f$ is analytic.
+
+Now, take a second and think what is the value of $f^\prime(z_0)$?
+It is zero because the derivative of $f$ exists at $z_0$ and the quotient $\frac{f(z_n) - f(z_0)}{z_n - z_0} = 0$ as $z_n \to z_0$.
+Similarly, $f^{\prime\prime}(z_0) = 0$, $f^{(3)}(z_0) = 0$, etc.
+And starting from this, we can easily complete the rest of the proof.
+
+\begin{proof}
+
+\end{proof}
 
 %------------------------------
 
