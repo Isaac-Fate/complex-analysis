@@ -1,5 +1,21 @@
 # Cauchy's Integral Formula
 
+````{prf:theorem}
+:label: thm:13
+
+Suppose $f$ is holomorphic in an open set $\Omega$, and $D$ is an open disk
+centered at $z_0$ whose closure is contained in $\Omega$. Then $f$ has a power
+series expansion at $z_0$ in the form
+
+```{math}
+:label: eq:45
+\begin{align}
+f(z) = \sum_{n=0}^\infty\frac{f^{(n)}(z_0)}{n!}(z - z_0)^n \quad\forall z \in D
+\end{align}
+```
+
+````
+
 ````{prf:theorem} Liouville's Theorem
 :label: thm:11
 
@@ -166,5 +182,76 @@ p(z) = a_{k+1}(z - z_1) \cdots(z - z_{k+1})
 ```
 {eq}`eq:57` tells us that $z_1, \ldots, z_{k+1}$ are roots of $p(z)$.
 Moreover, $p(z)$ cannot have any other roots. To see this, suppose $w \neq z_j \\forall j=1, \ldots, k+1$. Then, substituting $z = w$ in {eq}`eq:57`, we see that $p(w) \neq 0$ since each factor is nonzero.
+
+````
+
+The next theorem roughly demonstrates that the global behaviour of a holomorphic function is determined by its values on an appropriate small subset.
+
+
+````{prf:theorem}
+
+If $f$ is a holomorphic function in a connected open set $\Omega$, and vanishes on a sequence of distinct points whose limit is also in $\Omega$, then $f$ is constantly zero in $\Omega$.
+
+In other words, let $f$ be a holomorphic function in a connected open set $\Omega$.
+Suppose $\{z_n\}_{n \in \Z^+}$ is a sequence of distinct points in $\Omega$, and it converges to $z_0 \in \Omega$. If $f(z_n) = 0$ for all $n$ and $f(z_0) = 0$, then $f(z) = 0$ for all $z \in \Omega$.
+
+````
+
+At a first glance, this result seems magical and almost unrealistic.
+How can the value of a function vanishes in the entire set only because it vanishes on a sequence of distinct points?
+
+
+
+````{prf:proof}
+
+We will first show that $f$ vanishes in an open disk $D_r(z_0)$ of $z_0$.
+Since $f$ is holomorphic in $\Omega$, it is given by its Taylor series expansion at $z_0$:
+
+```{math}
+\begin{align*}
+f(z) = \sum_{n=0}^\infty a_n  (z - z_0)^n \quad\forall z \in D_r(z_0)
+\end{align*}
+```
+
+Assume $f$ is not constantly zero.
+Then we can find the first nonzero coefficient $a_m$ in the expansion.
+Write
+
+```{math}
+:label: eq:58
+\begin{align}
+f(z) & = a_m(z - z_0)^m + \sum_{k=1}^\infty a_{m+k}(z - z_0)^{m+k}\nonumber\\& = a_m(z - z_0)^m \left[1 + \sum_{k=1}^\infty\frac{a_{m+k}}{a_m}(z - z_0)^{k}\right]\end{align}
+```
+
+Note that the term $\sum_{k=1}^\infty \frac{a_{m+k}}{a_m}  (z - z_0)^{k}$ is a continuous function that vanishes at $z_0$.
+Hence, we may find a sufficiently small neighbourhood $N$ of $z_0$ such that $1 + \sum_{k=1}^\infty \frac{a_{m+k}}{a_m}  (z - z_0)^{k}$ is nonzero in $N$.
+By the given condition, there exists a point $z_j$ in the sequence such that $z_j \neq z_0$ and $z_j \in N$.
+Plugging $z_j$ into {eq}`eq:58`, we have
+
+```{math}
+\begin{align*}
+0 = f(z_j) = a_m(z_j - z_0)^m \left[1 + \sum_{k=1}^\infty\frac{a_{m+k}}{a_m}(z_j - z_0)^{k}\right]\end{align*}
+```
+
+This leads to a contradiction since the right-hand side is nonzero.
+Therefore, $f$ is constantly zero in the disk $D_r(z_0)$.
+
+Next, we will show that $f$ is zero in the entire set $\Omega$ by exploiting the fact that $\Omega$ is connected.
+Let set $U$ be defined as the interior of the set of all points at which $f$ vanishes, i.e, $U = [f^{-1}(\{0\})]^\circ$
+:::{note}
+
+We apply the interior here to enforce that $U$ is open. Now, we will show that it is also closed and hence $U = \Omega$. (Of course, $U \neq \emptyset$.)
+
+:::
+
+Note that $U$ is a nonempty open subset of $\Omega$.
+Let $w$ be an accumulation point of $U$.
+Then we can find a sequence $\{w_n\}$ of distinct points in $U$.
+And by the definition of $U$, $f(w_n) = 0 \\forall n$.
+Applying what we have proved above, we conclude that $f(z) = 0 \\forall z \in D_{r^\prime} (w)$.
+This shows that $w \in U$.
+Therefore, $U$ contains all its points of accumulation, which means it is also closed.
+Because $\Omega$ is connected and $U$ is a nonempty, both open and closed subset in $\Omega$, it follows that $U = \Omega$.
+Therefore, $f(z) = 0 \\forall z \in \Omega$.
 
 ````

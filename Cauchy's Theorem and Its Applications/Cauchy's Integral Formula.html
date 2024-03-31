@@ -36,6 +36,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonition.css?v=0e211108" />
+    <link rel="stylesheet" type="text/css" href="../_static/dataframe.css?v=b115e540" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -394,13 +396,24 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="cauchy-s-integral-formula">
 <h1><span class="section-number">2.1. </span>Cauchy’s Integral Formula<a class="headerlink" href="#cauchy-s-integral-formula" title="Link to this heading">#</a></h1>
-<div class="proof theorem admonition" id="thm:11">
-<p class="admonition-title"><span class="caption-number">Theorem 2.1 </span> (Liouville’s Theorem)</p>
+<div class="proof theorem admonition" id="thm:13">
+<p class="admonition-title"><span class="caption-number">Theorem 2.1 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(f\)</span> is holomorphic in an open set <span class="math notranslate nohighlight">\(\Omega\)</span>, and <span class="math notranslate nohighlight">\(D\)</span> is an open disk
+centered at <span class="math notranslate nohighlight">\(z_0\)</span> whose closure is contained in <span class="math notranslate nohighlight">\(\Omega\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> has a power
+series expansion at <span class="math notranslate nohighlight">\(z_0\)</span> in the form</p>
+<div class="math notranslate nohighlight" id="equation-eq-45">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-eq-45" title="Link to this equation">#</a></span>\[\begin{align}
+f(z) = \sum_{n=0}^\infty\frac{f^{(n)}(z_0)}{n!}(z - z_0)^n \quad\forall z \in D
+\end{align}\]</div>
+</section>
+</div><div class="proof theorem admonition" id="thm:11">
+<p class="admonition-title"><span class="caption-number">Theorem 2.2 </span> (Liouville’s Theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p>TODO</p>
 </section>
 </div><div class="proof theorem admonition" id="thm:12">
-<p class="admonition-title"><span class="caption-number">Theorem 2.2 </span> (Fundamental Theorem of Algebra)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 2.3 </span> (Fundamental Theorem of Algebra)</p>
 <section class="theorem-content" id="proof-content">
 <p>Every polynomial with degree greater than <span class="math notranslate nohighlight">\(0\)</span> with complex coefficients has a
 root in <span class="math notranslate nohighlight">\(\C\)</span>.</p>
@@ -426,8 +439,8 @@ To do so, we are going to show <span class="math notranslate nohighlight">\(1 / 
 tend to <span class="math notranslate nohighlight">\(\abs{a_n}\)</span>.
 This implies that there exists <span class="math notranslate nohighlight">\(R &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-55">
-<span class="eqno">(2.1)<a class="headerlink" href="#equation-eq-55" title="Link to this equation">#</a></span>\[\begin{align}\abs{\frac{p(z)}{z^n}} &gt; \frac{\abs{a_n}}{2}\end{align}\]</div>
-<p>whenever <span class="math notranslate nohighlight">\(\abs{z} &gt; R\)</span>. Rearranging <a class="reference internal" href="#equation-eq-55">(2.1)</a>, we have</p>
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-eq-55" title="Link to this equation">#</a></span>\[\begin{align}\abs{\frac{p(z)}{z^n}} &gt; \frac{\abs{a_n}}{2}\end{align}\]</div>
+<p>whenever <span class="math notranslate nohighlight">\(\abs{z} &gt; R\)</span>. Rearranging <a class="reference internal" href="#equation-eq-55">(2.2)</a>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{\frac{1}{p(z)}} &lt; \frac{2}{\abs{a_n}}\cdot\frac{1}{\abs{z}^n} &lt; \frac{2}{\abs{a_n} R^n}\quad\text{if }\abs{z} &gt; R
 \end{align*}\]</div>
@@ -436,7 +449,7 @@ at <span class="math notranslate nohighlight">\(0\)</span> with radius <span cla
 <p>For points inside the closed disk <span class="math notranslate nohighlight">\(\overline{D}\)</span>, since function <span class="math notranslate nohighlight">\(\abs{1 / p(z)}\)</span> is
 continuous and <span class="math notranslate nohighlight">\(\overline{D}\)</span> is compact, <span class="math notranslate nohighlight">\(\abs{1 / p(z)}\)</span> attains its maximum <span class="math notranslate nohighlight">\(M\)</span> on <span class="math notranslate nohighlight">\(\overline{D}\)</span>.</p>
 <p>Therefore, we see that <span class="math notranslate nohighlight">\(1 / p(z)\)</span> is indeed bounded on entire complex plane <span class="math notranslate nohighlight">\(\C\)</span>.
-By Liouville’s theorem <a class="reference internal" href="#thm:11">Theorem 2.1</a>, <span class="math notranslate nohighlight">\(1 / p(z)\)</span> is constant, which leads to a
+By Liouville’s theorem <a class="reference internal" href="#thm:11">Theorem 2.2</a>, <span class="math notranslate nohighlight">\(1 / p(z)\)</span> is constant, which leads to a
 contradiction since polynomials with degree greater than <span class="math notranslate nohighlight">\(0\)</span> are non-constant.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -456,7 +469,7 @@ induction we can show that it actually has <span class="math notranslate nohighl
 \[\begin{align*}
 p(z) = a_n (z^n - z_1) (z^n - z_2) \cdots(z^n - z_n)
 \end{align*}\]</div>
-<div class="proof corollary admonition" id="corollary-3">
+<div class="proof corollary admonition" id="corollary-4">
 <p class="admonition-title"><span class="caption-number">Corollary 2.1 </span></p>
 <section class="corollary-content" id="proof-content">
 <p>Every polynomial <span class="math notranslate nohighlight">\(p(z) = a_n z^n + \cdots + a_1 z + a_0\)</span> of degree <span class="math notranslate nohighlight">\(n \geq 1\)</span> with
@@ -471,15 +484,15 @@ p(z) = a_n (z^n - z_1) (z^n - z_2) \cdots(z^n - z_n)
 <p>Proof. We shall prove by induction.</p>
 <p><strong>Base Case:</strong> Suppose <span class="math notranslate nohighlight">\(n = 1\)</span>, then <span class="math notranslate nohighlight">\(p(z) = a_1 z + a_0\)</span>(<span class="math notranslate nohighlight">\(a_1 \neq 0\)</span>). Setting <span class="math notranslate nohighlight">\(p(z) = 0\)</span>, we solve that <span class="math notranslate nohighlight">\(z = -a_0 / a_1\)</span>. Therefore, <span class="math notranslate nohighlight">\(z_1 = -a_0 / a_1\)</span> is the only root of <span class="math notranslate nohighlight">\(p(z)\)</span>, and we can write <span class="math notranslate nohighlight">\(p(z) = a_1(z - z_1)\)</span>.</p>
 <p><strong>Inductive Step:</strong> Assume this corollary holds for <span class="math notranslate nohighlight">\(n = k\)</span>, we need to show that it also holds for <span class="math notranslate nohighlight">\(n = k + 1\)</span>.
-By the Fundamental Theorem of Algebra <a class="reference internal" href="#thm:12">Theorem 2.2</a>, there exists one root <span class="math notranslate nohighlight">\(z_1\)</span> for <span class="math notranslate nohighlight">\(p(z)\)</span>.
+By the Fundamental Theorem of Algebra <a class="reference internal" href="#thm:12">Theorem 2.3</a>, there exists one root <span class="math notranslate nohighlight">\(z_1\)</span> for <span class="math notranslate nohighlight">\(p(z)\)</span>.
 We want to show that <span class="math notranslate nohighlight">\(p(z)\)</span> has a factor <span class="math notranslate nohighlight">\((z - z_1)\)</span>.
 Let <span class="math notranslate nohighlight">\(\tilde{p}(z) = p(z + z_1)\)</span>.
 Note that <span class="math notranslate nohighlight">\(\tilde{p}(z)\)</span> is also a polynomial of degree <span class="math notranslate nohighlight">\(k + 1\)</span>.
 Write</p>
 <div class="math notranslate nohighlight" id="equation-eq-56">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-eq-56" title="Link to this equation">#</a></span>\[\begin{align}\tilde{p}(z) = b_{k+1} z^{k+1} + \cdots + b_1 z + b_0
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-eq-56" title="Link to this equation">#</a></span>\[\begin{align}\tilde{p}(z) = b_{k+1} z^{k+1} + \cdots + b_1 z + b_0
 \end{align}\]</div>
-<p>Because <span class="math notranslate nohighlight">\(z_1\)</span> is a root of <span class="math notranslate nohighlight">\(p(z)\)</span>, we have <span class="math notranslate nohighlight">\(\tilde{p}(0) = p(z_1) = 0\)</span>. Substituting <span class="math notranslate nohighlight">\(z=0\)</span> into <a class="reference internal" href="#equation-eq-56">(2.2)</a> yields <span class="math notranslate nohighlight">\(b_0 = 0\)</span>.
+<p>Because <span class="math notranslate nohighlight">\(z_1\)</span> is a root of <span class="math notranslate nohighlight">\(p(z)\)</span>, we have <span class="math notranslate nohighlight">\(\tilde{p}(0) = p(z_1) = 0\)</span>. Substituting <span class="math notranslate nohighlight">\(z=0\)</span> into <a class="reference internal" href="#equation-eq-56">(2.3)</a> yields <span class="math notranslate nohighlight">\(b_0 = 0\)</span>.
 Therefore, we can write</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\tilde{p}(z) = z (b_{k+1} z^{k} + \cdots b_2 z + b_1)
@@ -501,11 +514,59 @@ p(z) &amp; = (z - z_1) [c (z - z_2) \cdots(z - z_{k+1})]\\&amp; = c (z - z_1) \c
 <p>And we realized that <span class="math notranslate nohighlight">\(c\)</span> is exactly <span class="math notranslate nohighlight">\(a_{k+1}\)</span> since it is the coefficient of <span class="math notranslate nohighlight">\(z^{k+1}\)</span>.
 Therefore, we have shown</p>
 <div class="math notranslate nohighlight" id="equation-eq-57">
-<span class="eqno">(2.3)<a class="headerlink" href="#equation-eq-57" title="Link to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-eq-57" title="Link to this equation">#</a></span>\[\begin{align}
 p(z) = a_{k+1}(z - z_1) \cdots(z - z_{k+1})
 \end{align}\]</div>
-<p><a class="reference internal" href="#equation-eq-57">(2.3)</a> tells us that <span class="math notranslate nohighlight">\(z_1, \ldots, z_{k+1}\)</span> are roots of <span class="math notranslate nohighlight">\(p(z)\)</span>.
-Moreover, <span class="math notranslate nohighlight">\(p(z)\)</span> cannot have any other roots. To see this, suppose <span class="math notranslate nohighlight">\(w \neq z_j \\forall j=1, \ldots, k+1\)</span>. Then, substituting <span class="math notranslate nohighlight">\(z = w\)</span> in <a class="reference internal" href="#equation-eq-57">(2.3)</a>, we see that <span class="math notranslate nohighlight">\(p(w) \neq 0\)</span> since each factor is nonzero.</p>
+<p><a class="reference internal" href="#equation-eq-57">(2.4)</a> tells us that <span class="math notranslate nohighlight">\(z_1, \ldots, z_{k+1}\)</span> are roots of <span class="math notranslate nohighlight">\(p(z)\)</span>.
+Moreover, <span class="math notranslate nohighlight">\(p(z)\)</span> cannot have any other roots. To see this, suppose <span class="math notranslate nohighlight">\(w \neq z_j \\forall j=1, \ldots, k+1\)</span>. Then, substituting <span class="math notranslate nohighlight">\(z = w\)</span> in <a class="reference internal" href="#equation-eq-57">(2.4)</a>, we see that <span class="math notranslate nohighlight">\(p(w) \neq 0\)</span> since each factor is nonzero.</p>
+</div>
+<p>The next theorem roughly demonstrates that the global behaviour of a holomorphic function is determined by its values on an appropriate small subset.</p>
+<div class="proof theorem admonition" id="theorem-5">
+<p class="admonition-title"><span class="caption-number">Theorem 2.4 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(f\)</span> is a holomorphic function in a connected open set <span class="math notranslate nohighlight">\(\Omega\)</span>, and vanishes on a sequence of distinct points whose limit is also in <span class="math notranslate nohighlight">\(\Omega\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> is constantly zero in <span class="math notranslate nohighlight">\(\Omega\)</span>.</p>
+<p>In other words, let <span class="math notranslate nohighlight">\(f\)</span> be a holomorphic function in a connected open set <span class="math notranslate nohighlight">\(\Omega\)</span>.
+Suppose <span class="math notranslate nohighlight">\(\{z_n\}_{n \in \Z^+}\)</span> is a sequence of distinct points in <span class="math notranslate nohighlight">\(\Omega\)</span>, and it converges to <span class="math notranslate nohighlight">\(z_0 \in \Omega\)</span>. If <span class="math notranslate nohighlight">\(f(z_n) = 0\)</span> for all <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(f(z_0) = 0\)</span>, then <span class="math notranslate nohighlight">\(f(z) = 0\)</span> for all <span class="math notranslate nohighlight">\(z \in \Omega\)</span>.</p>
+</section>
+</div><p>At a first glance, this result seems magical and almost unrealistic.
+How can the value of a function vanishes in the entire set only because it vanishes on a sequence of distinct points?</p>
+<div class="proof admonition" id="proof">
+<p>Proof. We will first show that <span class="math notranslate nohighlight">\(f\)</span> vanishes in an open disk <span class="math notranslate nohighlight">\(D_r(z_0)\)</span> of <span class="math notranslate nohighlight">\(z_0\)</span>.
+Since <span class="math notranslate nohighlight">\(f\)</span> is holomorphic in <span class="math notranslate nohighlight">\(\Omega\)</span>, it is given by its Taylor series expansion at <span class="math notranslate nohighlight">\(z_0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+f(z) = \sum_{n=0}^\infty a_n  (z - z_0)^n \quad\forall z \in D_r(z_0)
+\end{align*}\]</div>
+<p>Assume <span class="math notranslate nohighlight">\(f\)</span> is not constantly zero.
+Then we can find the first nonzero coefficient <span class="math notranslate nohighlight">\(a_m\)</span> in the expansion.
+Write</p>
+<div class="math notranslate nohighlight" id="equation-eq-58">
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-eq-58" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+f(z) &amp; = a_m(z - z_0)^m + \sum_{k=1}^\infty a_{m+k}(z - z_0)^{m+k}\nonumber\\&amp; = a_m(z - z_0)^m \left[1 + \sum_{k=1}^\infty\frac{a_{m+k}}{a_m}(z - z_0)^{k}\right]\end{align}\end{split}\]</div>
+<p>Note that the term <span class="math notranslate nohighlight">\(\sum_{k=1}^\infty \frac{a_{m+k}}{a_m}  (z - z_0)^{k}\)</span> is a continuous function that vanishes at <span class="math notranslate nohighlight">\(z_0\)</span>.
+Hence, we may find a sufficiently small neighbourhood <span class="math notranslate nohighlight">\(N\)</span> of <span class="math notranslate nohighlight">\(z_0\)</span> such that <span class="math notranslate nohighlight">\(1 + \sum_{k=1}^\infty \frac{a_{m+k}}{a_m}  (z - z_0)^{k}\)</span> is nonzero in <span class="math notranslate nohighlight">\(N\)</span>.
+By the given condition, there exists a point <span class="math notranslate nohighlight">\(z_j\)</span> in the sequence such that <span class="math notranslate nohighlight">\(z_j \neq z_0\)</span> and <span class="math notranslate nohighlight">\(z_j \in N\)</span>.
+Plugging <span class="math notranslate nohighlight">\(z_j\)</span> into <a class="reference internal" href="#equation-eq-58">(2.5)</a>, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+0 = f(z_j) = a_m(z_j - z_0)^m \left[1 + \sum_{k=1}^\infty\frac{a_{m+k}}{a_m}(z_j - z_0)^{k}\right]\end{align*}\]</div>
+<p>This leads to a contradiction since the right-hand side is nonzero.
+Therefore, <span class="math notranslate nohighlight">\(f\)</span> is constantly zero in the disk <span class="math notranslate nohighlight">\(D_r(z_0)\)</span>.</p>
+<p>Next, we will show that <span class="math notranslate nohighlight">\(f\)</span> is zero in the entire set <span class="math notranslate nohighlight">\(\Omega\)</span> by exploiting the fact that <span class="math notranslate nohighlight">\(\Omega\)</span> is connected.
+Let set <span class="math notranslate nohighlight">\(U\)</span> be defined as the interior of the set of all points at which <span class="math notranslate nohighlight">\(f\)</span> vanishes, i.e, <span class="math notranslate nohighlight">\(U = [f^{-1}(\{0\})]^\circ\)</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We apply the interior here to enforce that <span class="math notranslate nohighlight">\(U\)</span> is open. Now, we will show that it is also closed and hence <span class="math notranslate nohighlight">\(U = \Omega\)</span>. (Of course, <span class="math notranslate nohighlight">\(U \neq \emptyset\)</span>.)</p>
+</div>
+<p>Note that <span class="math notranslate nohighlight">\(U\)</span> is a nonempty open subset of <span class="math notranslate nohighlight">\(\Omega\)</span>.
+Let <span class="math notranslate nohighlight">\(w\)</span> be an accumulation point of <span class="math notranslate nohighlight">\(U\)</span>.
+Then we can find a sequence <span class="math notranslate nohighlight">\(\{w_n\}\)</span> of distinct points in <span class="math notranslate nohighlight">\(U\)</span>.
+And by the definition of <span class="math notranslate nohighlight">\(U\)</span>, <span class="math notranslate nohighlight">\(f(w_n) = 0 \\forall n\)</span>.
+Applying what we have proved above, we conclude that <span class="math notranslate nohighlight">\(f(z) = 0 \\forall z \in D_{r^\prime} (w)\)</span>.
+This shows that <span class="math notranslate nohighlight">\(w \in U\)</span>.
+Therefore, <span class="math notranslate nohighlight">\(U\)</span> contains all its points of accumulation, which means it is also closed.
+Because <span class="math notranslate nohighlight">\(\Omega\)</span> is connected and <span class="math notranslate nohighlight">\(U\)</span> is a nonempty, both open and closed subset in <span class="math notranslate nohighlight">\(\Omega\)</span>, it follows that <span class="math notranslate nohighlight">\(U = \Omega\)</span>.
+Therefore, <span class="math notranslate nohighlight">\(f(z) = 0 \\forall z \in \Omega\)</span>.</p>
 </div>
 </section>
 
