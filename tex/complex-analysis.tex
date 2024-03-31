@@ -205,16 +205,50 @@ The next theorem roughly demonstrates that the global behaviour of a holomorphic
 At a first glance, this result seems magical and almost unrealistic.
 How can the value of a function vanishes in the entire set only because it vanishes on a sequence of distinct points?
 
-And when we work on a proof, where should we start?
-The key point of this proof is by exploiting the fact that $f$ is analytic.
-
-Now, take a second and think what is the value of $f^\prime(z_0)$?
-It is zero because the derivative of $f$ exists at $z_0$ and the quotient $\frac{f(z_n) - f(z_0)}{z_n - z_0} = 0$ as $z_n \to z_0$.
-Similarly, $f^{\prime\prime}(z_0) = 0$, $f^{(3)}(z_0) = 0$, etc.
-And starting from this, we can easily complete the rest of the proof.
 
 \begin{proof}
+    We will first show that $f$ vanishes in an open disk $D_r(z_0)$ of $z_0$.
+    Since $f$ is holomorphic in $\Omega$, it is given by its Taylor series expansion at $z_0$:
+    \begin{align*}
+        f(z) = \sum_{n=0}^\infty a_n  (z - z_0)^n \quad \forall z \in D_r(z_0)
+    \end{align*}
+    Assume $f$ is not constantly zero.
+    Then we can find the first nonzero coefficient $a_m$ in the expansion.
+    Write
+    \begin{align}
+        f(z) & = a_m(z - z_0)^m + \sum_{k=1}^\infty a_{m+k}  (z - z_0)^{m+k} \nonumber \\
+             & = a_m(z - z_0)^m \left[
+            1 + \sum_{k=1}^\infty \frac{a_{m+k}}{a_m}  (z - z_0)^{k}
+            \right]
+        \label{eq:58}
+    \end{align}
+    Note that the term $\sum_{k=1}^\infty \frac{a_{m+k}}{a_m}  (z - z_0)^{k}$ is a continuous function that vanishes at $z_0$.
+    Hence, we may find a sufficiently small neighbourhood $N$ of $z_0$ such that $1 + \sum_{k=1}^\infty \frac{a_{m+k}}{a_m}  (z - z_0)^{k}$ is nonzero in $N$.
+    By the given condition, there exists a point $z_j$ in the sequence such that $z_j \neq z_0$ and $z_j \in N$.
+    Plugging $z_j$ into \eqref{eq:58}, we have
+    \begin{align*}
+        0 = f(z_j) = a_m(z_j - z_0)^m \left[
+            1 + \sum_{k=1}^\infty \frac{a_{m+k}}{a_m}  (z_j - z_0)^{k}
+            \right]
+    \end{align*}
+    This leads to a contradiction since the right-hand side is nonzero.
+    Therefore, $f$ is constantly zero in the disk $D_r(z_0)$.
 
+    Next, we will show that $f$ is zero in the entire set $\Omega$ by exploiting the fact that $\Omega$ is connected.
+    Let set $U$ be defined as the interior of the set of all points at which $f$ vanishes, i.e, $U = [f^{-1}(\{0\})]^\circ$
+    \begin{note}
+        We apply the interior here to enforce that $U$ is open. Now, we will show that it is also closed and hence $U = \Omega$. (Of course, $U \neq \emptyset$.)
+    \end{note}
+
+    Note that $U$ is a nonempty open subset of $\Omega$.
+    Let $w$ be an accumulation point of $U$.
+    Then we can find a sequence $\{w_n\}$ of distinct points in $U$.
+    And by the definition of $U$, $f(w_n) = 0 \ \forall n$.
+    Applying what we have proved above, we conclude that $f(z) = 0 \ \forall z \in D_{r^\prime} (w)$.
+    This shows that $w \in U$.
+    Therefore, $U$ contains all its points of accumulation, which means it is also closed.
+    Because $\Omega$ is connected and $U$ is a nonempty, both open and closed subset in $\Omega$, it follows that $U = \Omega$.
+    Therefore, $f(z) = 0 \ \forall z \in \Omega$.
 \end{proof}
 
 %------------------------------
