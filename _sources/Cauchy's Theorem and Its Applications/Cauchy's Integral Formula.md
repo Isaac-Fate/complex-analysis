@@ -247,11 +247,11 @@ We apply the interior here to enforce that $U$ is open. Now, we will show that i
 Note that $U$ is a nonempty open subset of $\Omega$.
 Let $w$ be an accumulation point of $U$.
 Then we can find a sequence $\{w_n\}$ of distinct points in $U$.
-And by the definition of $U$, $f(w_n) = 0 \\forall n$.
-Applying what we have proved above, we conclude that $f(z) = 0 \\forall z \in D_{r^\prime} (w)$.
+And by the definition of $U$, $f(w_n) = 0 \; \forall n$.
+Applying what we have proved above, we conclude that $f(z) = 0 \; \forall z \in D_{r^\prime} (w)$.
 This shows that $w \in U$.
 Therefore, $U$ contains all its points of accumulation, which means it is also closed.
 Because $\Omega$ is connected and $U$ is a nonempty, both open and closed subset in $\Omega$, it follows that $U = \Omega$.
-Therefore, $f(z) = 0 \\forall z \in \Omega$.
+Therefore, $f(z) = 0 \; \forall z \in \Omega$.
 
 ````
