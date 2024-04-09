@@ -1,4 +1,1 @@
 # Point-Set Topology
-
-````{tableofcontents}
-````

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1. Point-Set Topology &#8212; Complex Analysis</title>
+    <title>2.2. Local Existence of Primitives and Cauchy’s Theorem in a Disk &#8212; Complex Analysis</title>
   
   
   
@@ -59,12 +59,14 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Point-Set Topology/index';</script>
+    <script>window.MathJax = {"tex": {"macros": {"AC": "\\mathcal{A}", "BC": "\\mathcal{B}", "C": "\\mathbb{C}", "CC": "\\mathcal{C}", "DC": "\\mathcal{D}", "EC": "\\mathcal{E}", "F": "\\mathbb{F}", "FC": "\\mathcal{F}", "GC": "\\mathcal{G}", "HC": "\\mathcal{H}", "MC": "\\mathcal{M}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "PC": "\\mathcal{P}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "RE": ["\\mathrm{Re}"], "SC": "\\mathcal{S}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "brk": ["\\left( #1 \\right)", 1], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "dif": "\\, \\mathrm{d}", "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "proj": ["\\mathop{\\mathrm{proj}}"], "restr": ["{#1}|_{#2}", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Cauchy's Theorem and Its Applications/Local Existence of Primitives and Cauchy's Theorem in a Disk';</script>
     <link rel="icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.1. Preimages" href="Preimages.html" />
-    <link rel="prev" title="Preface" href="../Preface/index.html" />
+    <link rel="next" title="2.3. Cauchy’s Integral Formula" href="Cauchy%27s%20Integral%20Formula.html" />
+    <link rel="prev" title="2.1. Goursat’s Theorem" href="Goursat%27s%20Theorem.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -183,14 +185,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../Preface/index.html">Preface</a></li>
 </ul>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">1. Point-Set Topology</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Preimages.html">1.1. Preimages</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Point-Set%20Topology/index.html">1. Point-Set Topology</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Point-Set%20Topology/Preimages.html">1.1. Preimages</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Cauchy%27s%20Theorem%20and%20Its%20Applications/index.html">2. Cauchy’s Theorem and Its Applications</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Cauchy%27s%20Theorem%20and%20Its%20Applications/Goursat%27s%20Theorem.html">2.1. Goursat’s Theorem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Cauchy%27s%20Theorem%20and%20Its%20Applications/Local%20Existence%20of%20Primitives%20and%20Cauchy%27s%20Theorem%20in%20a%20Disk.html">2.2. Local Existence of Primitives and Cauchy’s Theorem in a Disk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Cauchy%27s%20Theorem%20and%20Its%20Applications/Cauchy%27s%20Integral%20Formula.html">2.3. Cauchy’s Integral Formula</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">2. Cauchy’s Theorem and Its Applications</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Goursat%27s%20Theorem.html">2.1. Goursat’s Theorem</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.2. Local Existence of Primitives and Cauchy’s Theorem in a Disk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Cauchy%27s%20Integral%20Formula.html">2.3. Cauchy’s Integral Formula</a></li>
 </ul>
 </li>
 </ul>
@@ -269,7 +271,7 @@
       
       
       
-      <li><a href="https://github.com/Isaac-Fate/complex-analysis/issues/new?title=Issue%20on%20page%20%2FPoint-Set Topology/index.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Isaac-Fate/complex-analysis/issues/new?title=Issue%20on%20page%20%2FCauchy's Theorem and Its Applications/Local Existence of Primitives and Cauchy's Theorem in a Disk.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -299,7 +301,7 @@
       
       
       
-      <li><a href="../_sources/Point-Set Topology/index.md" target="_blank"
+      <li><a href="../_sources/Cauchy's Theorem and Its Applications/Local Existence of Primitives and Cauchy's Theorem in a Disk.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -381,7 +383,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Point-Set Topology</h1>
+    <h1>Local Existence of Primitives and Cauchy’s Theorem in a Disk</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -395,9 +397,47 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="point-set-topology">
-<h1><span class="section-number">1. </span>Point-Set Topology<a class="headerlink" href="#point-set-topology" title="Link to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="local-existence-of-primitives-and-cauchy-s-theorem-in-a-disk">
+<h1><span class="section-number">2.2. </span>Local Existence of Primitives and Cauchy’s Theorem in a Disk<a class="headerlink" href="#local-existence-of-primitives-and-cauchy-s-theorem-in-a-disk" title="Link to this heading">#</a></h1>
+<div class="proof theorem admonition" id="theorem-0">
+<p class="admonition-title"><span class="caption-number">Theorem 2.2 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(f\)</span> is holomorphic in an open disk <span class="math notranslate nohighlight">\(D \subseteq \CC\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> has a primitive there.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof.  Without loss of generality, we may assume the disk <span class="math notranslate nohighlight">\(D\)</span> is centered at the origin.
+If it is centered at <span class="math notranslate nohighlight">\(z_0\)</span>,
+we can translate the disk to the origin and define <span class="math notranslate nohighlight">\(f(z) = f(z + z_0)\)</span>.
+Then we find a primitive for <span class="math notranslate nohighlight">\(f\)</span>, say <span class="math notranslate nohighlight">\(F\)</span>.
+The primitive for <span class="math notranslate nohighlight">\(f\)</span> is then given by <span class="math notranslate nohighlight">\(F(z) = F(z - z_0)\)</span>.</p>
+<p>Assume <span class="math notranslate nohighlight">\(D\)</span> is centered at the origin,
+we are going to construct a primitive <span class="math notranslate nohighlight">\(F\)</span> for <span class="math notranslate nohighlight">\(f\)</span> in <span class="math notranslate nohighlight">\(D\)</span>
+using a contour integral.
+For any point <span class="math notranslate nohighlight">\(z \in D\)</span>,
+curve <span class="math notranslate nohighlight">\(\gamma_z\)</span> is taken to be the horizontal line segment
+from <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(\RE z\)</span>
+followed by the vertical segment from <span class="math notranslate nohighlight">\(\RE z\)</span> to <span class="math notranslate nohighlight">\(z\)</span>.
+Note that <span class="math notranslate nohighlight">\(\gamma_z\)</span> is indeed contained in <span class="math notranslate nohighlight">\(D\)</span>.
+Let function <span class="math notranslate nohighlight">\(F\)</span> be defined by</p>
+<div class="math notranslate nohighlight" id="equation-eq-6">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-eq-6" title="Link to this equation">#</a></span>\[ F(z) = \int_{\gamma_z} f(w) \dif w
+ \]</div>
+<p>We will show <span class="math notranslate nohighlight">\(F\)</span> is indeed a primitive for <span class="math notranslate nohighlight">\(f\)</span> in <span class="math notranslate nohighlight">\(D\)</span>.
+Hence, we need to estimate the quotient <span class="math notranslate nohighlight">\(\frac{F(z+h) - F(z)}{h}\)</span> when <span class="math notranslate nohighlight">\(h \to 0\)</span>.</p>
+<p>This invites us to consider the contour integral of <span class="math notranslate nohighlight">\(f\)</span> along curve <span class="math notranslate nohighlight">\(\gamma_{z_h} - \gamma_z\)</span>. As illustrated in <a class="reference internal" href="#fig-1"><span class="std std-numref">Fig. 2.1</span></a>,
+by adding a rectangle and a triangle without change the value of the contour integral
+due to <a class="reference internal" href="Goursat%27s%20Theorem.html#thm:4">Theorem 2.1</a> and <a class="reference internal" href="Goursat%27s%20Theorem.html#cor:1">Corollary 2.1</a>, one may verify that</p>
+<div class="math notranslate nohighlight">
+\[ F(z+h) - F(z) = \int_{\gamma_{z+h} - \gamma_z} f(w) \dif w
+ = \int_\eta f(w) \dif w
+ \]</div>
+<p>where <span class="math notranslate nohighlight">\(\eta\)</span> is the line segment from <span class="math notranslate nohighlight">\(z\)</span> to <span class="math notranslate nohighlight">\(z+h\)</span>.</p>
+<figure class="align-default" id="fig-1">
+<img alt="../_images/adding-a-rectangle-and-a-triangle.png" src="../_images/adding-a-rectangle-and-a-triangle.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Construction of curve <span class="math notranslate nohighlight">\(\eta\)</span> by adding a rectangle and a triangle to the curve <span class="math notranslate nohighlight">\(\gamma_{z+h} - \gamma_z\)</span>.</span><a class="headerlink" href="#fig-1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </div>
 </section>
 
@@ -414,7 +454,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./Point-Set Topology"
+            path: "./Cauchy's Theorem and Its Applications"
         },
         predefinedOutput: true
     }
@@ -432,20 +472,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Preface/index.html"
+       href="Goursat%27s%20Theorem.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Preface</p>
+        <p class="prev-next-title"><span class="section-number">2.1. </span>Goursat’s Theorem</p>
       </div>
     </a>
     <a class="right-next"
-       href="Preimages.html"
+       href="Cauchy%27s%20Integral%20Formula.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.1. </span>Preimages</p>
+        <p class="prev-next-title"><span class="section-number">2.3. </span>Cauchy’s Integral Formula</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
