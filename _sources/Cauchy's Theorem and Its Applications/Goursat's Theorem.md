@@ -3,7 +3,7 @@
 ````{prf:theorem} Goursat's Theorem
 :label: thm:4
 
- Let $\Omega \subseteq \CC$ be an open set and $T \subseteq \Omega$ a triangle whose interior is also contained in $\Omega$.
+ Let $\Omega \subseteq \C$ be an open set and $T \subseteq \Omega$ a triangle whose interior is also contained in $\Omega$.
  If $f$ is holomorphic in $\Omega$, then
  
 ```{math}

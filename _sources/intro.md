@@ -1,7 +1,6 @@
-# Preface
+# Introduction
 
-This book mainly follows the structure of {cite}`steinComplexAnalysis2003`.
-
+Welcome to my notebook on Complex Analysis.
 
 ## Table of Contents
 

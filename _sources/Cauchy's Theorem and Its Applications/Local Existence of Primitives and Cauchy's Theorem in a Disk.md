@@ -2,7 +2,7 @@
 
 ````{prf:theorem} 
 
- If $f$ is holomorphic in an open disk $D \subseteq \CC$, then $f$ has a primitive there.
+ If $f$ is holomorphic in an open disk $D \subseteq \C$, then $f$ has a primitive there.
 
 ````
 
