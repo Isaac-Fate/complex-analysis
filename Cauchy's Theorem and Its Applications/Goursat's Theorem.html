@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>2.1. Goursat’s Theorem &#8212; Complex Analysis</title>
+    <title>3.1. Goursat’s Theorem &#8212; Complex Analysis</title>
   
   
   
@@ -64,8 +64,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Cauchy's Theorem and Its Applications/Goursat's Theorem';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.2. Local Existence of Primitives and Cauchy’s Theorem in a Disk" href="Local%20Existence%20of%20Primitives%20and%20Cauchy%27s%20Theorem%20in%20a%20Disk.html" />
-    <link rel="prev" title="2. Cauchy’s Theorem and Its Applications" href="index.html" />
+    <link rel="next" title="3.2. Local Existence of Primitives and Cauchy’s Theorem in a Disk" href="Local%20Existence%20of%20Primitives%20and%20Cauchy%27s%20Theorem%20in%20a%20Disk.html" />
+    <link rel="prev" title="3. Cauchy’s Theorem and Its Applications" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -188,10 +188,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../Point-Set%20Topology/Preimages.html">1.1. Preimages</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">2. Cauchy’s Theorem and Its Applications</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.1. Goursat’s Theorem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Local%20Existence%20of%20Primitives%20and%20Cauchy%27s%20Theorem%20in%20a%20Disk.html">2.2. Local Existence of Primitives and Cauchy’s Theorem in a Disk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Cauchy%27s%20Integral%20Formula.html">2.3. Cauchy’s Integral Formula</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Complex%20Functions/index.html">2. Complex Functions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Complex%20Functions/Holomorphic%20Functions.html">2.1. Holomorphic Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">3. Cauchy’s Theorem and Its Applications</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.1. Goursat’s Theorem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Local%20Existence%20of%20Primitives%20and%20Cauchy%27s%20Theorem%20in%20a%20Disk.html">3.2. Local Existence of Primitives and Cauchy’s Theorem in a Disk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Cauchy%27s%20Integral%20Formula.html">3.3. Cauchy’s Integral Formula</a></li>
 </ul>
 </li>
 </ul>
@@ -365,9 +369,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="goursat-s-theorem">
-<h1><span class="section-number">2.1. </span>Goursat’s Theorem<a class="headerlink" href="#goursat-s-theorem" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3.1. </span>Goursat’s Theorem<a class="headerlink" href="#goursat-s-theorem" title="Link to this heading">#</a></h1>
 <div class="proof theorem admonition" id="thm:4">
-<p class="admonition-title"><span class="caption-number">Theorem 2.1 </span> (Goursat’s Theorem)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 3.1 </span> (Goursat’s Theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\Omega \subseteq \C\)</span> be an open set and <span class="math notranslate nohighlight">\(T \subseteq \Omega\)</span> a triangle whose interior is also contained in <span class="math notranslate nohighlight">\(\Omega\)</span>.
 If <span class="math notranslate nohighlight">\(f\)</span> is holomorphic in <span class="math notranslate nohighlight">\(\Omega\)</span>, then</p>
@@ -377,14 +381,14 @@ If <span class="math notranslate nohighlight">\(f\)</span> is holomorphic in <sp
 </section>
 </div><p>We could state and prove Goursat’s Theorem
 considering the counter integral along a rectangle.
-But we will see in <a class="reference internal" href="#cor:1">Corollary 2.1</a>
+But we will see in <a class="reference internal" href="#cor:1">Corollary 3.1</a>
 that the rectangle version is an immediate corollary of this triangle version
 since we can divide a rectangle into two triangles.</p>
 <div class="proof admonition" id="proof">
 <p>Proof.</p>
 </div>
 <div class="proof corollary admonition" id="cor:1">
-<p class="admonition-title"><span class="caption-number">Corollary 2.1 </span></p>
+<p class="admonition-title"><span class="caption-number">Corollary 3.1 </span></p>
 <section class="corollary-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(f\)</span> is holomorphic in an open set <span class="math notranslate nohighlight">\(\Omega\)</span>
 containing a rectangle <span class="math notranslate nohighlight">\(R\)</span> and its interior, then</p>
@@ -430,7 +434,7 @@ containing a rectangle <span class="math notranslate nohighlight">\(R\)</span> a
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Cauchy’s Theorem and Its Applications</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Cauchy’s Theorem and Its Applications</p>
       </div>
     </a>
     <a class="right-next"
@@ -438,7 +442,7 @@ containing a rectangle <span class="math notranslate nohighlight">\(R\)</span> a
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.2. </span>Local Existence of Primitives and Cauchy’s Theorem in a Disk</p>
+        <p class="prev-next-title"><span class="section-number">3.2. </span>Local Existence of Primitives and Cauchy’s Theorem in a Disk</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

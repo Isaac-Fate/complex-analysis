@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>2.2. Local Existence of Primitives and Cauchy’s Theorem in a Disk &#8212; Complex Analysis</title>
+    <title>3.2. Local Existence of Primitives and Cauchy’s Theorem in a Disk &#8212; Complex Analysis</title>
   
   
   
@@ -64,8 +64,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Cauchy's Theorem and Its Applications/Local Existence of Primitives and Cauchy's Theorem in a Disk';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.3. Cauchy’s Integral Formula" href="Cauchy%27s%20Integral%20Formula.html" />
-    <link rel="prev" title="2.1. Goursat’s Theorem" href="Goursat%27s%20Theorem.html" />
+    <link rel="next" title="3.3. Cauchy’s Integral Formula" href="Cauchy%27s%20Integral%20Formula.html" />
+    <link rel="prev" title="3.1. Goursat’s Theorem" href="Goursat%27s%20Theorem.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -188,10 +188,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../Point-Set%20Topology/Preimages.html">1.1. Preimages</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">2. Cauchy’s Theorem and Its Applications</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Goursat%27s%20Theorem.html">2.1. Goursat’s Theorem</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.2. Local Existence of Primitives and Cauchy’s Theorem in a Disk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Cauchy%27s%20Integral%20Formula.html">2.3. Cauchy’s Integral Formula</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Complex%20Functions/index.html">2. Complex Functions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Complex%20Functions/Holomorphic%20Functions.html">2.1. Holomorphic Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">3. Cauchy’s Theorem and Its Applications</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Goursat%27s%20Theorem.html">3.1. Goursat’s Theorem</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.2. Local Existence of Primitives and Cauchy’s Theorem in a Disk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Cauchy%27s%20Integral%20Formula.html">3.3. Cauchy’s Integral Formula</a></li>
 </ul>
 </li>
 </ul>
@@ -365,9 +369,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="local-existence-of-primitives-and-cauchy-s-theorem-in-a-disk">
-<h1><span class="section-number">2.2. </span>Local Existence of Primitives and Cauchy’s Theorem in a Disk<a class="headerlink" href="#local-existence-of-primitives-and-cauchy-s-theorem-in-a-disk" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3.2. </span>Local Existence of Primitives and Cauchy’s Theorem in a Disk<a class="headerlink" href="#local-existence-of-primitives-and-cauchy-s-theorem-in-a-disk" title="Link to this heading">#</a></h1>
 <div class="proof theorem admonition" id="theorem-0">
-<p class="admonition-title"><span class="caption-number">Theorem 2.2 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 3.2 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(f\)</span> is holomorphic in an open disk <span class="math notranslate nohighlight">\(D \subseteq \C\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> has a primitive there.</p>
 </section>
@@ -391,11 +395,11 @@ Let function <span class="math notranslate nohighlight">\(F\)</span> be defined 
  \]</div>
 <p>We will show <span class="math notranslate nohighlight">\(F\)</span> is indeed a primitive for <span class="math notranslate nohighlight">\(f\)</span> in <span class="math notranslate nohighlight">\(D\)</span>.
 Hence, we need to estimate the quotient <span class="math notranslate nohighlight">\(\frac{F(z+h) - F(z)}{h}\)</span> when <span class="math notranslate nohighlight">\(h \to 0\)</span>.</p>
-<p>This invites us to consider the contour integral of <span class="math notranslate nohighlight">\(f\)</span> along curve <span class="math notranslate nohighlight">\(\gamma_{z_h} - \gamma_z\)</span>. As illustrated in <a class="reference internal" href="#fig-1"><span class="std std-numref">Fig. 2.1</span></a>,
+<p>This invites us to consider the contour integral of <span class="math notranslate nohighlight">\(f\)</span> along curve <span class="math notranslate nohighlight">\(\gamma_{z_h} - \gamma_z\)</span>. As illustrated in <a class="reference internal" href="#fig-1"><span class="std std-numref">Fig. 3.1</span></a>,
 by adding a rectangle and a triangle without change the value of the contour integral
-due to <a class="reference internal" href="Goursat%27s%20Theorem.html#thm:4">Theorem 2.1</a> and <a class="reference internal" href="Goursat%27s%20Theorem.html#cor:1">Corollary 2.1</a>, one may verify that</p>
+due to <a class="reference internal" href="Goursat%27s%20Theorem.html#thm:4">Theorem 3.1</a> and <a class="reference internal" href="Goursat%27s%20Theorem.html#cor:1">Corollary 3.1</a>, one may verify that</p>
 <div class="math notranslate nohighlight" id="equation-eq-6">
-<span class="eqno">(2.1)<a class="headerlink" href="#equation-eq-6" title="Link to this equation">#</a></span>\[ F(z+h) - F(z)
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-eq-6" title="Link to this equation">#</a></span>\[ F(z+h) - F(z)
  = \int_{\gamma_{z+h} - \gamma_z} f(w) \dif w
  = \int_\eta f(w) \dif w
  \]</div>
@@ -403,7 +407,7 @@ due to <a class="reference internal" href="Goursat%27s%20Theorem.html#thm:4">The
 <figure class="align-default" id="fig-1">
 <img alt="../_images/adding-a-rectangle-and-a-triangle.png" src="../_images/adding-a-rectangle-and-a-triangle.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Construction of curve <span class="math notranslate nohighlight">\(\eta\)</span> by adding a rectangle and a triangle to the curve <span class="math notranslate nohighlight">\(\gamma_{z+h} - \gamma_z\)</span>.</span><a class="headerlink" href="#fig-1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.1 </span><span class="caption-text">Construction of curve <span class="math notranslate nohighlight">\(\eta\)</span> by adding a rectangle and a triangle to the curve <span class="math notranslate nohighlight">\(\gamma_{z+h} - \gamma_z\)</span>.</span><a class="headerlink" href="#fig-1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Now, we are going to estimate <span class="math notranslate nohighlight">\(f(w)\)</span> about the point <span class="math notranslate nohighlight">\(z\)</span>. Because <span class="math notranslate nohighlight">\(f\)</span> is continuous, we can write</p>
@@ -416,21 +420,21 @@ due to <a class="reference internal" href="Goursat%27s%20Theorem.html#thm:4">The
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Estimating <span class="math notranslate nohighlight">\(f(w)\)</span> about <span class="math notranslate nohighlight">\(z\)</span> using the derivative of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(z\)</span>,
-like what we did in the proof of <a class="reference internal" href="Goursat%27s%20Theorem.html#thm:4">Theorem 2.1</a>, may be an overkill.
+like what we did in the proof of <a class="reference internal" href="Goursat%27s%20Theorem.html#thm:4">Theorem 3.1</a>, may be an overkill.
 It suffices to estimate <span class="math notranslate nohighlight">\(f(w)\)</span> by exploiting the continuity of <span class="math notranslate nohighlight">\(f\)</span>.
 We have already used the fact that <span class="math notranslate nohighlight">\(f\)</span> is holomorphic to construct
 the curve <span class="math notranslate nohighlight">\(\eta\)</span> by applying the Goursat’s theorem.</p>
 </div>
 <p>It then follows that</p>
 <div class="math notranslate nohighlight" id="equation-eq-7">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-eq-7" title="Link to this equation">#</a></span>\[\begin{split}\int_\eta f(w) \dif w
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-eq-7" title="Link to this equation">#</a></span>\[\begin{split}\int_\eta f(w) \dif w
  &amp; = \int_\eta f(z) + \psi(w) \dif w \nonumber\\&amp; = f(z) \int_\eta 1 \dif w + \int_\eta\psi(w) \dif w \nonumber\\&amp; = f(z) h + \int_\eta\psi(w) \dif w
  \end{split}\]</div>
-<p>Combining <a class="reference internal" href="#equation-eq-6">(2.1)</a> and <a class="reference internal" href="#equation-eq-7">(2.2)</a>, we have</p>
+<p>Combining <a class="reference internal" href="#equation-eq-6">(3.1)</a> and <a class="reference internal" href="#equation-eq-7">(3.2)</a>, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-8">
-<span class="eqno">(2.3)<a class="headerlink" href="#equation-eq-8" title="Link to this equation">#</a></span>\[\begin{split}\abs{\frac{F(z+h) - F(z)}{h} - f(z)}&amp; = \frac{1}{\abs{h}}\abs{\int_\eta \psi(w) \dif w}\nonumber\\&amp; \text{Apply the ML inequality}\nonumber\\&amp; \leq\frac{1}{\abs{h}}\max_{w \in \eta}\abs{\psi(w)}\abs{h}\nonumber\\&amp; = \max_{w \in \eta}\abs{\psi(w)}\end{split}\]</div>
+<span class="eqno">(3.3)<a class="headerlink" href="#equation-eq-8" title="Link to this equation">#</a></span>\[\begin{split}\abs{\frac{F(z+h) - F(z)}{h} - f(z)}&amp; = \frac{1}{\abs{h}}\abs{\int_\eta \psi(w) \dif w}\nonumber\\&amp; \text{Apply the ML inequality}\nonumber\\&amp; \leq\frac{1}{\abs{h}}\max_{w \in \eta}\abs{\psi(w)}\abs{h}\nonumber\\&amp; = \max_{w \in \eta}\abs{\psi(w)}\end{split}\]</div>
 <p>As <span class="math notranslate nohighlight">\(h \to 0\)</span>, we have <span class="math notranslate nohighlight">\(w \to z\)</span> and hence <span class="math notranslate nohighlight">\(\psi(w) \to 0\)</span>.
-Therefore, the limit of the right-hand side of <a class="reference internal" href="#equation-eq-8">(2.3)</a>
+Therefore, the limit of the right-hand side of <a class="reference internal" href="#equation-eq-8">(3.3)</a>
 is <span class="math notranslate nohighlight">\(0\)</span> as <span class="math notranslate nohighlight">\(h \to 0\)</span>.
 This proves <span class="math notranslate nohighlight">\(F^\prime(z) = f(z)\)</span>.</p>
 </div>
@@ -472,7 +476,7 @@ This proves <span class="math notranslate nohighlight">\(F^\prime(z) = f(z)\)</s
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.1. </span>Goursat’s Theorem</p>
+        <p class="prev-next-title"><span class="section-number">3.1. </span>Goursat’s Theorem</p>
       </div>
     </a>
     <a class="right-next"
@@ -480,7 +484,7 @@ This proves <span class="math notranslate nohighlight">\(F^\prime(z) = f(z)\)</s
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.3. </span>Cauchy’s Integral Formula</p>
+        <p class="prev-next-title"><span class="section-number">3.3. </span>Cauchy’s Integral Formula</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
