@@ -386,16 +386,17 @@ from <span class="math notranslate nohighlight">\(0\)</span> to <span class="mat
 followed by the vertical segment from <span class="math notranslate nohighlight">\(\RE z\)</span> to <span class="math notranslate nohighlight">\(z\)</span>.
 Note that <span class="math notranslate nohighlight">\(\gamma_z\)</span> is indeed contained in <span class="math notranslate nohighlight">\(D\)</span>.
 Let function <span class="math notranslate nohighlight">\(F\)</span> be defined by</p>
-<div class="math notranslate nohighlight" id="equation-eq-6">
-<span class="eqno">(2.1)<a class="headerlink" href="#equation-eq-6" title="Link to this equation">#</a></span>\[ F(z) = \int_{\gamma_z} f(w) \dif w
+<div class="math notranslate nohighlight">
+\[ F(z) = \int_{\gamma_z} f(w) \dif w
  \]</div>
 <p>We will show <span class="math notranslate nohighlight">\(F\)</span> is indeed a primitive for <span class="math notranslate nohighlight">\(f\)</span> in <span class="math notranslate nohighlight">\(D\)</span>.
 Hence, we need to estimate the quotient <span class="math notranslate nohighlight">\(\frac{F(z+h) - F(z)}{h}\)</span> when <span class="math notranslate nohighlight">\(h \to 0\)</span>.</p>
 <p>This invites us to consider the contour integral of <span class="math notranslate nohighlight">\(f\)</span> along curve <span class="math notranslate nohighlight">\(\gamma_{z_h} - \gamma_z\)</span>. As illustrated in <a class="reference internal" href="#fig-1"><span class="std std-numref">Fig. 2.1</span></a>,
 by adding a rectangle and a triangle without change the value of the contour integral
 due to <a class="reference internal" href="Goursat%27s%20Theorem.html#thm:4">Theorem 2.1</a> and <a class="reference internal" href="Goursat%27s%20Theorem.html#cor:1">Corollary 2.1</a>, one may verify that</p>
-<div class="math notranslate nohighlight">
-\[ F(z+h) - F(z) = \int_{\gamma_{z+h} - \gamma_z} f(w) \dif w
+<div class="math notranslate nohighlight" id="equation-eq-6">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-eq-6" title="Link to this equation">#</a></span>\[ F(z+h) - F(z)
+ = \int_{\gamma_{z+h} - \gamma_z} f(w) \dif w
  = \int_\eta f(w) \dif w
  \]</div>
 <p>where <span class="math notranslate nohighlight">\(\eta\)</span> is the line segment from <span class="math notranslate nohighlight">\(z\)</span> to <span class="math notranslate nohighlight">\(z+h\)</span>.</p>
@@ -405,6 +406,33 @@ due to <a class="reference internal" href="Goursat%27s%20Theorem.html#thm:4">The
 <p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Construction of curve <span class="math notranslate nohighlight">\(\eta\)</span> by adding a rectangle and a triangle to the curve <span class="math notranslate nohighlight">\(\gamma_{z+h} - \gamma_z\)</span>.</span><a class="headerlink" href="#fig-1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
+<p>Now, we are going to estimate <span class="math notranslate nohighlight">\(f(w)\)</span> about the point <span class="math notranslate nohighlight">\(z\)</span>. Because <span class="math notranslate nohighlight">\(f\)</span> is continuous, we can write</p>
+<div class="math notranslate nohighlight">
+\[ f(w) = f(z) + \psi(w), \quad w \in D \setminus\{z\}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\psi(w)\)</span> is continuous and</p>
+<div class="math notranslate nohighlight">
+\[\lim_{w \to z}\psi(w) = 0
+ \]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Estimating <span class="math notranslate nohighlight">\(f(w)\)</span> about <span class="math notranslate nohighlight">\(z\)</span> using the derivative of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(z\)</span>,
+like what we did in the proof of <a class="reference internal" href="Goursat%27s%20Theorem.html#thm:4">Theorem 2.1</a>, may be an overkill.
+It suffices to estimate <span class="math notranslate nohighlight">\(f(w)\)</span> by exploiting the continuity of <span class="math notranslate nohighlight">\(f\)</span>.
+We have already used the fact that <span class="math notranslate nohighlight">\(f\)</span> is holomorphic to construct
+the curve <span class="math notranslate nohighlight">\(\eta\)</span> by applying the Goursat’s theorem.</p>
+</div>
+<p>It then follows that</p>
+<div class="math notranslate nohighlight" id="equation-eq-7">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-eq-7" title="Link to this equation">#</a></span>\[\begin{split}\int_\eta f(w) \dif w
+ &amp; = \int_\eta f(z) + \psi(w) \dif w \nonumber\\&amp; = f(z) \int_\eta 1 \dif w + \int_\eta\psi(w) \dif w \nonumber\\&amp; = f(z) h + \int_\eta\psi(w) \dif w
+ \end{split}\]</div>
+<p>Combining <a class="reference internal" href="#equation-eq-6">(2.1)</a> and <a class="reference internal" href="#equation-eq-7">(2.2)</a>, we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-8">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-eq-8" title="Link to this equation">#</a></span>\[\begin{split}\abs{\frac{F(z+h) - F(z)}{h} - f(z)}&amp; = \frac{1}{\abs{h}}\abs{\int_\eta \psi(w) \dif w}\nonumber\\&amp; \text{Apply the ML inequality}\nonumber\\&amp; \leq\frac{1}{\abs{h}}\max_{w \in \eta}\abs{\psi(w)}\abs{h}\nonumber\\&amp; = \max_{w \in \eta}\abs{\psi(w)}\end{split}\]</div>
+<p>As <span class="math notranslate nohighlight">\(h \to 0\)</span>, we have <span class="math notranslate nohighlight">\(w \to z\)</span> and hence <span class="math notranslate nohighlight">\(\psi(w) \to 0\)</span>.
+Therefore, the limit of the right-hand side of <a class="reference internal" href="#equation-eq-8">(2.3)</a>
+is <span class="math notranslate nohighlight">\(0\)</span> as <span class="math notranslate nohighlight">\(h \to 0\)</span>.
+This proves <span class="math notranslate nohighlight">\(F^\prime(z) = f(z)\)</span>.</p>
 </div>
 </section>
 
