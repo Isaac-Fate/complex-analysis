@@ -378,13 +378,13 @@ and <span class="math notranslate nohighlight">\(\Omega\)</span> an open set con
 If <span class="math notranslate nohighlight">\(f\)</span> is holomorphic in <span class="math notranslate nohighlight">\(\Omega\)</span>.
 Then for any point <span class="math notranslate nohighlight">\(z \in D\)</span>, we have</p>
 <div class="math notranslate nohighlight">
-\[ f(z) = \frac{1}{2 \pi i}\oint_{C}\frac{f(\zeta)}{\zeta - z}\dif\zeta\]</div>
+\[f(z) = \frac{1}{2 \pi i}\oint_{C}\frac{f(\zeta)}{\zeta - z}\dif\zeta\]</div>
 <p>where <span class="math notranslate nohighlight">\(C = \partial D\)</span> is the positively oriented circle boundary of <span class="math notranslate nohighlight">\(D\)</span>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof.  We will consider the contour integrals of the integrand</p>
+<p>Proof. We will consider the contour integrals of the integrand</p>
 <div class="math notranslate nohighlight">
-\[ g(\zeta) = \frac{f(\zeta)}{\zeta - z}, \quad\zeta\in D \setminus\{z\}\]</div>
+\[g(\zeta) = \frac{f(\zeta)}{\zeta - z}, \quad\zeta\in D \setminus\{z\}\]</div>
 <p>Consider the <span class="math notranslate nohighlight">\(\Gamma_{\delta, \varepsilon}\)</span> be a keyhole contour illustrated
 in <a class="reference internal" href="#fig-2"><span class="std std-numref">Fig. 3.2</span></a>.
 Here <span class="math notranslate nohighlight">\(\delta\)</span> denotes width of the corridor and <span class="math notranslate nohighlight">\(\varepsilon\)</span>
@@ -395,11 +395,10 @@ Cauchy’s Theorem tells us the counter integral
 along <span class="math notranslate nohighlight">\(\Gamma_{\delta, \varepsilon}\)</span> is zero, i.e.,</p>
 <div class="math notranslate nohighlight" id="equation-eq-9">
 <span class="eqno">(3.4)<a class="headerlink" href="#equation-eq-9" title="Link to this equation">#</a></span>\[\int_\gamma g(\zeta) \dif\zeta
- + \int_{\gamma_{\varepsilon}} g(\zeta) \dif\zeta
- + \int_{\ell_1} g(\zeta) \dif\zeta
- + \int_{\ell_2} g(\zeta) \dif\zeta
- = 0
- \]</div>
++ \int_{\gamma_{\varepsilon}} g(\zeta) \dif\zeta
++ \int_{\ell_1} g(\zeta) \dif\zeta
++ \int_{\ell_2} g(\zeta) \dif\zeta
+= 0\]</div>
 <figure class="align-default" id="fig-2">
 <img alt="../_images/keyhole-for-proving-the-cauchy-integral-formula.png" src="../_images/keyhole-for-proving-the-cauchy-integral-formula.png" />
 <figcaption>
@@ -426,47 +425,37 @@ and <span class="math notranslate nohighlight">\(\int_{\gamma_{\varepsilon}} g(\
 Hence, letting <span class="math notranslate nohighlight">\(\delta \to 0\)</span>, <a class="reference internal" href="#equation-eq-9">(3.4)</a> becomes</p>
 <div class="math notranslate nohighlight" id="equation-eq-10">
 <span class="eqno">(3.5)<a class="headerlink" href="#equation-eq-10" title="Link to this equation">#</a></span>\[\oint_C g(\zeta) \dif\zeta
- + \oint_{C_\varepsilon} g(\zeta) \dif\zeta
- = 0
- \]</div>
++ \oint_{C_\varepsilon} g(\zeta) \dif\zeta
+= 0\]</div>
 <p>We now turn our focus to the contour integral on <span class="math notranslate nohighlight">\(C_\varepsilon\)</span>.
 Exploiting the fact that <span class="math notranslate nohighlight">\(f\)</span>, we can write</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}		g(\zeta) &amp;= \frac{f(\zeta)}{\zeta - z}\\&amp;= \frac{1}{\zeta - z}(
-				 f(z) + f^\prime(z) (\zeta - z) + \psi(\zeta)
-				 ) \\&amp;= \frac{f(z)}{\zeta - z} + \left[
-					 f^\prime(z) + \frac{\psi(\zeta)}{\zeta - z}\right]\end{split}\]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>where $\frac{\psi(\zeta)}{\zeta - z} \to 0$ as $\zeta \to z$.
-Note that the term $f^\prime(z) + \frac{\psi(\zeta)}{\zeta - z}$ is bounded
-in a sufficiently small neighborhood of $z$.
-Therefore, as $\varepsilon \to 0$, $\oint_{C_\varepsilon} f^\prime(\zeta) + \frac{\psi(\zeta)}{\zeta - z} \dif \zeta \to 0$.
-Hence, the only $\frac{f(z)}{\zeta - z}$ will contribute to 
-the integral as $\varepsilon \to 0$.
-Let the negatively oriented 
-circle $C_\varepsilon$ be the parametrized by $\zeta(t) = z + e^{i t}$
-where $t$ goes from $2\pi$ to $0$.
-We have
-</pre></div>
-</div>
+\[\begin{split}g(\zeta) &amp;= \frac{f(\zeta)}{\zeta - z}\\&amp;= \frac{1}{\zeta - z}(
+f(z) + f^\prime(z) (\zeta - z) + \psi(\zeta)
+) \\&amp;= \frac{f(z)}{\zeta - z} + \left[
+f^\prime(z) + \frac{\psi(\zeta)}{\zeta - z}\right]\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\frac{\psi(\zeta)}{\zeta - z} \to 0\)</span> as <span class="math notranslate nohighlight">\(\zeta \to z\)</span>.
+Note that the term <span class="math notranslate nohighlight">\(f^\prime(z) + \frac{\psi(\zeta)}{\zeta - z}\)</span> is bounded
+in a sufficiently small neighborhood of <span class="math notranslate nohighlight">\(z\)</span>.
+Therefore, as <span class="math notranslate nohighlight">\(\varepsilon \to 0\)</span>, <span class="math notranslate nohighlight">\(\oint_{C_\varepsilon} f^\prime(\zeta) + \frac{\psi(\zeta)}{\zeta - z} \dif \zeta \to 0\)</span>.
+Hence, the only <span class="math notranslate nohighlight">\(\frac{f(z)}{\zeta - z}\)</span> will contribute to
+the integral as <span class="math notranslate nohighlight">\(\varepsilon \to 0\)</span>.
+Let the negatively oriented
+circle <span class="math notranslate nohighlight">\(C_\varepsilon\)</span> be the parametrized by <span class="math notranslate nohighlight">\(\zeta(t) = z + e^{i t}\)</span>
+where <span class="math notranslate nohighlight">\(t\)</span> goes from <span class="math notranslate nohighlight">\(2\pi\)</span> to <span class="math notranslate nohighlight">\(0\)</span>.
+We have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\oint_{C_\varepsilon}\frac{f(z)}{\zeta - z}\dif\zeta&amp;= f(z) \oint_{2 \pi}^{0}\frac{1}{e^{i t}} i e^{i t}\dif t \\&amp;= f(z) \oint_{0}^{2 \pi} i \dif t \\&amp;= - 2 \pi i f(z)
-	\end{split}\]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>In summary,
-</pre></div>
-</div>
+\end{split}\]</div>
+<p>In summary,</p>
 <div class="math notranslate nohighlight" id="equation-eq-11">
-<span class="eqno">(3.6)<a class="headerlink" href="#equation-eq-11" title="Link to this equation">#</a></span>\[\lim_{\varepsilon \to 0}\oint_{C_\varepsilon} g(\zeta) \dif\zeta = - 2 \pi i f(z)
-		\]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Letting $\varepsilon \to 0$ in {eq}`eq:10` and plugging in {eq}`eq:11`, 
-we obtain
-</pre></div>
-</div>
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-eq-11" title="Link to this equation">#</a></span>\[\lim_{\varepsilon \to 0}\oint_{C_\varepsilon} g(\zeta) \dif\zeta = - 2 \pi i f(z)\]</div>
+<p>Letting <span class="math notranslate nohighlight">\(\varepsilon \to 0\)</span> in <a class="reference internal" href="#equation-eq-10">(3.5)</a> and plugging in <a class="reference internal" href="#equation-eq-11">(3.6)</a>,
+we obtain</p>
 <div class="math notranslate nohighlight">
 \[\oint_C g(\zeta) \dif\zeta - 2 \pi i f(z) = 0
-	\]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>which is exactly what we wanted to show.
-</pre></div>
-</div>
+\]</div>
+<p>which is exactly what we wanted to show.</p>
 </div>
 <div class="proof theorem admonition" id="thm:1">
 <p class="admonition-title"><span class="caption-number">Theorem 3.4 </span></p>
@@ -475,8 +464,7 @@ we obtain
 centered at <span class="math notranslate nohighlight">\(z_0\)</span> whose closure is contained in <span class="math notranslate nohighlight">\(\Omega\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> has a power
 series expansion at <span class="math notranslate nohighlight">\(z_0\)</span> in the form</p>
 <div class="math notranslate nohighlight" id="equation-eq-1">
-<span class="eqno">(3.7)<a class="headerlink" href="#equation-eq-1" title="Link to this equation">#</a></span>\[ f(z) = \sum_{n=0}^\infty\frac{f^{(n)}(z_0)}{n!}(z - z_0)^n \quad\forall z \in D
- \]</div>
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-eq-1" title="Link to this equation">#</a></span>\[f(z) = \sum_{n=0}^\infty\frac{f^{(n)}(z_0)}{n!}(z - z_0)^n \quad\forall z \in D\]</div>
 </section>
 </div><div class="proof theorem admonition" id="thm:2">
 <p class="admonition-title"><span class="caption-number">Theorem 3.5 </span> (Liouville’s Theorem)</p>
@@ -489,10 +477,10 @@ series expansion at <span class="math notranslate nohighlight">\(z_0\)</span> in
 root in <span class="math notranslate nohighlight">\(\C\)</span>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof.  Let polynomial <span class="math notranslate nohighlight">\(p(z)\)</span> be given by</p>
+<p>Proof. Let polynomial <span class="math notranslate nohighlight">\(p(z)\)</span> be given by</p>
 <div class="math notranslate nohighlight">
-\[ p(z) = a_n z^n + \cdots a_1 z + a_0
- \]</div>
+\[p(z) = a_n z^n + \cdots a_1 z + a_0
+\]</div>
 <p>where <span class="math notranslate nohighlight">\(n \geq 1\)</span> and <span class="math notranslate nohighlight">\(a_n \neq 0\)</span>.
 We shall prove by contradiction.
 Assume <span class="math notranslate nohighlight">\(p(z)\)</span> has no roots in <span class="math notranslate nohighlight">\(\C\)</span>. Then the reciprocal <span class="math notranslate nohighlight">\(1 / p(z)\)</span> is defined on the entire
@@ -512,7 +500,7 @@ This implies that there exists <span class="math notranslate nohighlight">\(R &g
 <p>whenever <span class="math notranslate nohighlight">\(\abs{z} &gt; R\)</span>. Rearranging <a class="reference internal" href="#equation-eq-2">(3.8)</a>, we have</p>
 <div class="math notranslate nohighlight">
 \[\abs{\frac{1}{p(z)}} &lt; \frac{2}{\abs{a_n}}\cdot\frac{1}{\abs{z}^n} &lt; \frac{2}{\abs{a_n} R^n}\quad\text{if }\abs{z} &gt; R
- \]</div>
+\]</div>
 <p>The above inequality shows <span class="math notranslate nohighlight">\(1 / p(z)\)</span> is bounded outside the disk <span class="math notranslate nohighlight">\(D\)</span> centered
 at <span class="math notranslate nohighlight">\(0\)</span> with radius <span class="math notranslate nohighlight">\(R\)</span>.</p>
 <p>For points inside the closed disk <span class="math notranslate nohighlight">\(\overline{D}\)</span>, since function <span class="math notranslate nohighlight">\(\abs{1 / p(z)}\)</span> is
@@ -535,7 +523,7 @@ And the proof is not that trivial.</p>
 </div><p>Now, we have proved polynomial <span class="math notranslate nohighlight">\(p(z)\)</span> must have one root. Using mathematical
 induction we can show that it actually has <span class="math notranslate nohighlight">\(n\)</span> roots, and can be factorized as</p>
 <div class="math notranslate nohighlight">
-\[ p(z) = a_n (z^n - z_1) (z^n - z_2) \cdots(z^n - z_n)
+\[p(z) = a_n (z^n - z_1) (z^n - z_2) \cdots(z^n - z_n)
 \]</div>
 <div class="proof corollary admonition" id="corollary-5">
 <p class="admonition-title"><span class="caption-number">Corollary 3.2 </span></p>
@@ -544,11 +532,11 @@ induction we can show that it actually has <span class="math notranslate nohighl
 complex coefficients has exactly <span class="math notranslate nohighlight">\(n\)</span> roots in <span class="math notranslate nohighlight">\(\C\)</span>. If these <span class="math notranslate nohighlight">\(n\)</span> roots are
 denoted by <span class="math notranslate nohighlight">\(z_1, \ldots, z_n\)</span>, then <span class="math notranslate nohighlight">\(p(z)\)</span> can be factorized as</p>
 <div class="math notranslate nohighlight">
-\[ p(z) = a_n (z^n - z_1) (z^n - z_2) \cdots(z^n - z_n)
- \]</div>
+\[p(z) = a_n (z^n - z_1) (z^n - z_2) \cdots(z^n - z_n)
+\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof.  We shall prove by induction.</p>
+<p>Proof. We shall prove by induction.</p>
 <p>\noindent <strong>Base Case:</strong>  Suppose <span class="math notranslate nohighlight">\(n = 1\)</span>, then <span class="math notranslate nohighlight">\(p(z) = a_1 z + a_0\)</span>(<span class="math notranslate nohighlight">\(a_1 \neq 0\)</span>). Setting <span class="math notranslate nohighlight">\(p(z) = 0\)</span>, we solve that <span class="math notranslate nohighlight">\(z = -a_0 / a_1\)</span>. Therefore, <span class="math notranslate nohighlight">\(z_1 = -a_0 / a_1\)</span> is the only root of <span class="math notranslate nohighlight">\(p(z)\)</span>, and we can write <span class="math notranslate nohighlight">\(p(z) = a_1(z - z_1)\)</span>.</p>
 <p>\noindent <strong>Inductive Step:</strong>  Assume this corollary holds for <span class="math notranslate nohighlight">\(n = k\)</span>, we need to show that it also holds for <span class="math notranslate nohighlight">\(n = k + 1\)</span>.
 By the Fundamental Theorem of Algebra <a class="reference internal" href="#thm:3">Theorem 3.6</a>, there exists one root <span class="math notranslate nohighlight">\(z_1\)</span> for <span class="math notranslate nohighlight">\(p(z)\)</span>.
@@ -557,30 +545,28 @@ Let <span class="math notranslate nohighlight">\(\tilde{p}(z) = p(z + z_1)\)</sp
 Note that <span class="math notranslate nohighlight">\(\tilde{p}(z)\)</span> is also a polynomial of degree <span class="math notranslate nohighlight">\(k + 1\)</span>.
 Write</p>
 <div class="math notranslate nohighlight" id="equation-eq-3">
-<span class="eqno">(3.9)<a class="headerlink" href="#equation-eq-3" title="Link to this equation">#</a></span>\[\tilde{p}(z) = b_{k+1} z^{k+1} + \cdots + b_1 z + b_0
- \]</div>
+<span class="eqno">(3.9)<a class="headerlink" href="#equation-eq-3" title="Link to this equation">#</a></span>\[\tilde{p}(z) = b_{k+1} z^{k+1} + \cdots + b_1 z + b_0\]</div>
 <p>Because <span class="math notranslate nohighlight">\(z_1\)</span> is a root of <span class="math notranslate nohighlight">\(p(z)\)</span>, we have <span class="math notranslate nohighlight">\(\tilde{p}(0) = p(z_1) = 0\)</span>. Substituting <span class="math notranslate nohighlight">\(z=0\)</span> into <a class="reference internal" href="#equation-eq-3">(3.9)</a> yields <span class="math notranslate nohighlight">\(b_0 = 0\)</span>.
 Therefore, we can write</p>
 <div class="math notranslate nohighlight">
 \[\tilde{p}(z) = z (b_{k+1} z^{k} + \cdots b_2 z + b_1)
- \]</div>
+\]</div>
 <p>Then, we recover the expression of <span class="math notranslate nohighlight">\(p(z)\)</span> from <span class="math notranslate nohighlight">\(\tilde{p}(z)\)</span>.
 Note that <span class="math notranslate nohighlight">\(p(z) = \tilde{p}(z - z_1)\)</span>.
 Hence,</p>
 <div class="math notranslate nohighlight">
-\[ p(z) = (z - z_1) \underbrace{(b_{k+1} z^{k} + \cdots b_2 z + b_1)}_{\text{a polynomial of degree $k$}}
- = (z - z_1) q(z)
- \]</div>
+\[p(z) = (z - z_1) \underbrace{(b_{k+1} z^{k} + \cdots b_2 z + b_1)}_{\text{a polynomial of degree $k$}}
+= (z - z_1) q(z)
+\]</div>
 <p>Now, we may apply the induction hypothesis on <span class="math notranslate nohighlight">\(q(z)\)</span>.
 We have</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} p(z) &amp; = (z - z_1) [c (z - z_2) \cdots(z - z_{k+1})]\\&amp; = c (z - z_1) \cdots(z - z_{k+1})
- \end{split}\]</div>
+\[\begin{split}p(z) &amp; = (z - z_1) [c (z - z_2) \cdots(z - z_{k+1})]\\&amp; = c (z - z_1) \cdots(z - z_{k+1})
+\end{split}\]</div>
 <p>And we realized that <span class="math notranslate nohighlight">\(c\)</span> is exactly <span class="math notranslate nohighlight">\(a_{k+1}\)</span> since it is the coefficient of <span class="math notranslate nohighlight">\(z^{k+1}\)</span>.
 Therefore, we have shown</p>
 <div class="math notranslate nohighlight" id="equation-eq-4">
-<span class="eqno">(3.10)<a class="headerlink" href="#equation-eq-4" title="Link to this equation">#</a></span>\[ p(z) = a_{k+1}(z - z_1) \cdots(z - z_{k+1})
- \]</div>
+<span class="eqno">(3.10)<a class="headerlink" href="#equation-eq-4" title="Link to this equation">#</a></span>\[p(z) = a_{k+1}(z - z_1) \cdots(z - z_{k+1})\]</div>
 <p><a class="reference internal" href="#equation-eq-4">(3.10)</a> tells us that <span class="math notranslate nohighlight">\(z_1, \ldots, z_{k+1}\)</span> are roots of <span class="math notranslate nohighlight">\(p(z)\)</span>.
 Moreover, <span class="math notranslate nohighlight">\(p(z)\)</span> cannot have any other roots. To see this, suppose <span class="math notranslate nohighlight">\(w \neq z_j \ \forall j=1, \ldots, k+1\)</span>. Then, substituting <span class="math notranslate nohighlight">\(z = w\)</span> in <a class="reference internal" href="#equation-eq-4">(3.10)</a>, we see that <span class="math notranslate nohighlight">\(p(w) \neq 0\)</span> since each factor is nonzero.</p>
 </div>
@@ -595,24 +581,24 @@ Suppose <span class="math notranslate nohighlight">\(\{z_n\}_{n \in \Z^+}\)</spa
 </div><p>At a first glance, this result seems magical and almost unrealistic.
 How can the value of a function vanishes in the entire set only because it vanishes on a sequence of distinct points?</p>
 <div class="proof admonition" id="proof">
-<p>Proof.  We will first show that <span class="math notranslate nohighlight">\(f\)</span> vanishes in an open disk <span class="math notranslate nohighlight">\(D_r(z_0)\)</span> of <span class="math notranslate nohighlight">\(z_0\)</span>.
+<p>Proof. We will first show that <span class="math notranslate nohighlight">\(f\)</span> vanishes in an open disk <span class="math notranslate nohighlight">\(D_r(z_0)\)</span> of <span class="math notranslate nohighlight">\(z_0\)</span>.
 Since <span class="math notranslate nohighlight">\(f\)</span> is holomorphic in <span class="math notranslate nohighlight">\(\Omega\)</span>, it is given by its Taylor series expansion at <span class="math notranslate nohighlight">\(z_0\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[ f(z) = \sum_{n=0}^\infty a_n (z - z_0)^n \quad\forall z \in D_r(z_0)
- \]</div>
+\[f(z) = \sum_{n=0}^\infty a_n (z - z_0)^n \quad\forall z \in D_r(z_0)
+\]</div>
 <p>Assume <span class="math notranslate nohighlight">\(f\)</span> is not constantly zero.
 Then we can find the first nonzero coefficient <span class="math notranslate nohighlight">\(a_m\)</span> in the expansion.
 Write</p>
 <div class="math notranslate nohighlight" id="equation-eq-5">
-<span class="eqno">(3.11)<a class="headerlink" href="#equation-eq-5" title="Link to this equation">#</a></span>\[\begin{split} f(z) &amp; = a_m(z - z_0)^m + \sum_{k=1}^\infty a_{m+k}(z - z_0)^{m+k}\nonumber\\&amp; = a_m(z - z_0)^m \left[
- 1 + \sum_{k=1}^\infty\frac{a_{m+k}}{a_m}(z - z_0)^{k}\right]\end{split}\]</div>
+<span class="eqno">(3.11)<a class="headerlink" href="#equation-eq-5" title="Link to this equation">#</a></span>\[\begin{split}f(z) &amp; = a_m(z - z_0)^m + \sum_{k=1}^\infty a_{m+k}(z - z_0)^{m+k}\nonumber\\&amp; = a_m(z - z_0)^m \left[
+1 + \sum_{k=1}^\infty\frac{a_{m+k}}{a_m}(z - z_0)^{k}\right]\end{split}\]</div>
 <p>Note that the term <span class="math notranslate nohighlight">\(\sum_{k=1}^\infty \frac{a_{m+k}}{a_m}  (z - z_0)^{k}\)</span> is a continuous function that vanishes at <span class="math notranslate nohighlight">\(z_0\)</span>.
 Hence, we may find a sufficiently small neighbourhood <span class="math notranslate nohighlight">\(N\)</span> of <span class="math notranslate nohighlight">\(z_0\)</span> such that <span class="math notranslate nohighlight">\(1 + \sum_{k=1}^\infty \frac{a_{m+k}}{a_m}  (z - z_0)^{k}\)</span> is nonzero in <span class="math notranslate nohighlight">\(N\)</span>.
 By the given condition, there exists a point <span class="math notranslate nohighlight">\(z_j\)</span> in the sequence such that <span class="math notranslate nohighlight">\(z_j \neq z_0\)</span> and <span class="math notranslate nohighlight">\(z_j \in N\)</span>.
 Plugging <span class="math notranslate nohighlight">\(z_j\)</span> into <a class="reference internal" href="#equation-eq-5">(3.11)</a>, we have</p>
 <div class="math notranslate nohighlight">
-\[ 0 = f(z_j) = a_m(z_j - z_0)^m \left[
- 1 + \sum_{k=1}^\infty\frac{a_{m+k}}{a_m}(z_j - z_0)^{k}\right]\]</div>
+\[0 = f(z_j) = a_m(z_j - z_0)^m \left[
+1 + \sum_{k=1}^\infty\frac{a_{m+k}}{a_m}(z_j - z_0)^{k}\right]\]</div>
 <p>This leads to a contradiction since the right-hand side is nonzero.
 Therefore, <span class="math notranslate nohighlight">\(f\)</span> is constantly zero in the disk <span class="math notranslate nohighlight">\(D_r(z_0)\)</span>.</p>
 <p>Next, we will show that <span class="math notranslate nohighlight">\(f\)</span> is zero in the entire set <span class="math notranslate nohighlight">\(\Omega\)</span> by exploiting the fact that <span class="math notranslate nohighlight">\(\Omega\)</span> is connected.

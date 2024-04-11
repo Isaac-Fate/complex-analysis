@@ -7,13 +7,13 @@ written $f^{-1}(S)$, is defined by
 
 ```{math}
 
- f^{-1}(S) := \{x \in X \mid f(x) \in S\}
+f^{-1}(S) := \{x \in X \mid f(x) \in S\}
 ```
 
 In other words,
 
 ```{math}
 
- x \in f^{-1}(S) \iff f(x) \in S
+x \in f^{-1}(S) \iff f(x) \in S
 
 ```
