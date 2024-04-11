@@ -1,5 +1,132 @@
 # Cauchy's Integral Formula
 
+````{prf:theorem} Cauchy's Integral Formula
+:label: thm:5
+
+ Let $D$ be an open disk,
+ and $\Omega$ an open set containing $\overline{D}$.
+ If $f$ is holomorphic in $\Omega$.
+ Then for any point $z \in D$, we have
+ 
+```{math}
+
+ f(z) = \frac{1}{2 \pi i}\oint_{C}\frac{f(\zeta)}{\zeta - z}\dif\zeta
+```
+
+ where $C = \partial D$ is the positively oriented circle boundary of $D$.
+
+````
+
+````{prf:proof}
+
+ We will consider the contour integrals of the integrand
+ 
+```{math}
+
+ g(\zeta) = \frac{f(\zeta)}{\zeta - z}, \quad\zeta\in D \setminus\{z\}
+```
+
+ Consider the $\Gamma_{\delta, \varepsilon}$ be a keyhole contour illustrated
+ in {numref}`fig:2`.
+ Here $\delta$ denotes width of the corridor and $\varepsilon$
+ is the radius of the small arc $\gamma_{\varepsilon}$ centered at $z$.
+ The outer arc is denoted by $\gamma$ and the two line segments forming the corridor
+ are denoted by $\ell_1$ and $\ell_2$.
+ Cauchy's Theorem tells us the counter integral
+ along $\Gamma_{\delta, \varepsilon}$ is zero, i.e.,
+ 
+```{math}
+:label: eq:9
+\int_\gamma g(\zeta) \dif\zeta
+ + \int_{\gamma_{\varepsilon}} g(\zeta) \dif\zeta
+ + \int_{\ell_1} g(\zeta) \dif\zeta
+ + \int_{\ell_2} g(\zeta) \dif\zeta
+ = 0
+ 
+```
+```{figure} /figures/keyhole-for-proving-the-cauchy-integral-formula.png
+---
+name: fig:2
+---
+The keyhole contour $\Gamma_{\delta, \varepsilon}$.
+```
+
+ As $\delta \to 0$,
+ the corridor gets narrower and narrower,
+ the integrals along $\ell_1$ and $\ell_2$
+ will cancel each other.
+ To see this, consider the illustration in {numref}`fig:3`.
+
+ ```{figure} /figures/adding-a-quadrilateral-to-two-line-segments.png
+---
+name: fig:3
+---
+By adding a quadrilateral to the two line segments, the sum of the contour integrals along $\ell_1$ and $\ell_2$ is equivalently transformed to the sum of contour integrals along $\ell_3$ and $\ell_4$. As $\delta \to 0$, both lengths of $\ell_3$ and $\ell_4$ tend to zero, and hence the contour integrals along them will also vanish
+            by the ML inequality.
+```
+
+ Meanwhile, as $\delta \to 0$,
+ the contour integrals along arcs will tend to
+ the integrals along the circles, i.e.,
+ $\int_\gamma g(\zeta) \dif \zeta \to \oint_C g(\zeta) \dif \zeta$
+ and $\int_{\gamma_{\varepsilon}} g(\zeta) \dif \zeta \to \oint_{C_\varepsilon} g(\zeta) \dif \zeta$
+ Hence, letting $\delta \to 0$, {eq}`eq:9` becomes
+ 
+```{math}
+:label: eq:10
+\oint_C g(\zeta) \dif\zeta
+ + \oint_{C_\varepsilon} g(\zeta) \dif\zeta
+ = 0
+ 
+```
+
+ We now turn our focus to the contour integral on $C_\varepsilon$.
+	Exploiting the fact that $f$, we can write 
+	
+```{math}
+
+		g(\zeta) &= \frac{f(\zeta)}{\zeta - z}\\&= \frac{1}{\zeta - z}(
+				 f(z) + f^\prime(z) (\zeta - z) + \psi(\zeta)
+				 ) \\&= \frac{f(z)}{\zeta - z} + \left[
+					 f^\prime(z) + \frac{\psi(\zeta)}{\zeta - z}\right]
+```
+
+	where $\frac{\psi(\zeta)}{\zeta - z} \to 0$ as $\zeta \to z$.
+	Note that the term $f^\prime(z) + \frac{\psi(\zeta)}{\zeta - z}$ is bounded
+	in a sufficiently small neighborhood of $z$.
+	Therefore, as $\varepsilon \to 0$, $\oint_{C_\varepsilon} f^\prime(\zeta) + \frac{\psi(\zeta)}{\zeta - z} \dif \zeta \to 0$.
+	Hence, the only $\frac{f(z)}{\zeta - z}$ will contribute to 
+	the integral as $\varepsilon \to 0$.
+	Let the negatively oriented 
+	circle $C_\varepsilon$ be the parametrized by $\zeta(t) = z + e^{i t}$
+	where $t$ goes from $2\pi$ to $0$.
+	We have
+	
+```{math}
+\oint_{C_\varepsilon}\frac{f(z)}{\zeta - z}\dif\zeta&= f(z) \oint_{2 \pi}^{0}\frac{1}{e^{i t}} i e^{i t}\dif t \\&= f(z) \oint_{0}^{2 \pi} i \dif t \\&= - 2 \pi i f(z)
+	
+```
+
+	In summary,
+	
+```{math}
+:label: eq:11
+\lim_{\varepsilon \to 0}\oint_{C_\varepsilon} g(\zeta) \dif\zeta = - 2 \pi i f(z)
+		
+```
+
+	Letting $\varepsilon \to 0$ in {eq}`eq:10` and plugging in {eq}`eq:11`, 
+	we obtain
+	
+```{math}
+\oint_C g(\zeta) \dif\zeta - 2 \pi i f(z) = 0
+	
+```
+
+	which is exactly what we wanted to show.
+
+````
+
 ````{prf:theorem} 
 :label: thm:1
 

@@ -370,22 +370,120 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="cauchy-s-integral-formula">
 <h1><span class="section-number">3.3. </span>Cauchy’s Integral Formula<a class="headerlink" href="#cauchy-s-integral-formula" title="Link to this heading">#</a></h1>
+<div class="proof theorem admonition" id="thm:5">
+<p class="admonition-title"><span class="caption-number">Theorem 3.3 </span> (Cauchy’s Integral Formula)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(D\)</span> be an open disk,
+and <span class="math notranslate nohighlight">\(\Omega\)</span> an open set containing <span class="math notranslate nohighlight">\(\overline{D}\)</span>.
+If <span class="math notranslate nohighlight">\(f\)</span> is holomorphic in <span class="math notranslate nohighlight">\(\Omega\)</span>.
+Then for any point <span class="math notranslate nohighlight">\(z \in D\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[ f(z) = \frac{1}{2 \pi i}\oint_{C}\frac{f(\zeta)}{\zeta - z}\dif\zeta\]</div>
+<p>where <span class="math notranslate nohighlight">\(C = \partial D\)</span> is the positively oriented circle boundary of <span class="math notranslate nohighlight">\(D\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof.  We will consider the contour integrals of the integrand</p>
+<div class="math notranslate nohighlight">
+\[ g(\zeta) = \frac{f(\zeta)}{\zeta - z}, \quad\zeta\in D \setminus\{z\}\]</div>
+<p>Consider the <span class="math notranslate nohighlight">\(\Gamma_{\delta, \varepsilon}\)</span> be a keyhole contour illustrated
+in <a class="reference internal" href="#fig-2"><span class="std std-numref">Fig. 3.2</span></a>.
+Here <span class="math notranslate nohighlight">\(\delta\)</span> denotes width of the corridor and <span class="math notranslate nohighlight">\(\varepsilon\)</span>
+is the radius of the small arc <span class="math notranslate nohighlight">\(\gamma_{\varepsilon}\)</span> centered at <span class="math notranslate nohighlight">\(z\)</span>.
+The outer arc is denoted by <span class="math notranslate nohighlight">\(\gamma\)</span> and the two line segments forming the corridor
+are denoted by <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span>.
+Cauchy’s Theorem tells us the counter integral
+along <span class="math notranslate nohighlight">\(\Gamma_{\delta, \varepsilon}\)</span> is zero, i.e.,</p>
+<div class="math notranslate nohighlight" id="equation-eq-9">
+<span class="eqno">(3.4)<a class="headerlink" href="#equation-eq-9" title="Link to this equation">#</a></span>\[\int_\gamma g(\zeta) \dif\zeta
+ + \int_{\gamma_{\varepsilon}} g(\zeta) \dif\zeta
+ + \int_{\ell_1} g(\zeta) \dif\zeta
+ + \int_{\ell_2} g(\zeta) \dif\zeta
+ = 0
+ \]</div>
+<figure class="align-default" id="fig-2">
+<img alt="../_images/keyhole-for-proving-the-cauchy-integral-formula.png" src="../_images/keyhole-for-proving-the-cauchy-integral-formula.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 3.2 </span><span class="caption-text">The keyhole contour <span class="math notranslate nohighlight">\(\Gamma_{\delta, \varepsilon}\)</span>.</span><a class="headerlink" href="#fig-2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>As <span class="math notranslate nohighlight">\(\delta \to 0\)</span>,
+the corridor gets narrower and narrower,
+the integrals along <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span>
+will cancel each other.
+To see this, consider the illustration in <a class="reference internal" href="#fig-3"><span class="std std-numref">Fig. 3.3</span></a>.</p>
+<figure class="align-default" id="fig-3">
+<img alt="../_images/adding-a-quadrilateral-to-two-line-segments.png" src="../_images/adding-a-quadrilateral-to-two-line-segments.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 3.3 </span><span class="caption-text">By adding a quadrilateral to the two line segments, the sum of the contour integrals along <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> is equivalently transformed to the sum of contour integrals along <span class="math notranslate nohighlight">\(\ell_3\)</span> and <span class="math notranslate nohighlight">\(\ell_4\)</span>. As <span class="math notranslate nohighlight">\(\delta \to 0\)</span>, both lengths of <span class="math notranslate nohighlight">\(\ell_3\)</span> and <span class="math notranslate nohighlight">\(\ell_4\)</span> tend to zero, and hence the contour integrals along them will also vanish
+by the ML inequality.</span><a class="headerlink" href="#fig-3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Meanwhile, as <span class="math notranslate nohighlight">\(\delta \to 0\)</span>,
+the contour integrals along arcs will tend to
+the integrals along the circles, i.e.,
+<span class="math notranslate nohighlight">\(\int_\gamma g(\zeta) \dif \zeta \to \oint_C g(\zeta) \dif \zeta\)</span>
+and <span class="math notranslate nohighlight">\(\int_{\gamma_{\varepsilon}} g(\zeta) \dif \zeta \to \oint_{C_\varepsilon} g(\zeta) \dif \zeta\)</span>
+Hence, letting <span class="math notranslate nohighlight">\(\delta \to 0\)</span>, <a class="reference internal" href="#equation-eq-9">(3.4)</a> becomes</p>
+<div class="math notranslate nohighlight" id="equation-eq-10">
+<span class="eqno">(3.5)<a class="headerlink" href="#equation-eq-10" title="Link to this equation">#</a></span>\[\oint_C g(\zeta) \dif\zeta
+ + \oint_{C_\varepsilon} g(\zeta) \dif\zeta
+ = 0
+ \]</div>
+<p>We now turn our focus to the contour integral on <span class="math notranslate nohighlight">\(C_\varepsilon\)</span>.
+Exploiting the fact that <span class="math notranslate nohighlight">\(f\)</span>, we can write</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}		g(\zeta) &amp;= \frac{f(\zeta)}{\zeta - z}\\&amp;= \frac{1}{\zeta - z}(
+				 f(z) + f^\prime(z) (\zeta - z) + \psi(\zeta)
+				 ) \\&amp;= \frac{f(z)}{\zeta - z} + \left[
+					 f^\prime(z) + \frac{\psi(\zeta)}{\zeta - z}\right]\end{split}\]</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>where $\frac{\psi(\zeta)}{\zeta - z} \to 0$ as $\zeta \to z$.
+Note that the term $f^\prime(z) + \frac{\psi(\zeta)}{\zeta - z}$ is bounded
+in a sufficiently small neighborhood of $z$.
+Therefore, as $\varepsilon \to 0$, $\oint_{C_\varepsilon} f^\prime(\zeta) + \frac{\psi(\zeta)}{\zeta - z} \dif \zeta \to 0$.
+Hence, the only $\frac{f(z)}{\zeta - z}$ will contribute to 
+the integral as $\varepsilon \to 0$.
+Let the negatively oriented 
+circle $C_\varepsilon$ be the parametrized by $\zeta(t) = z + e^{i t}$
+where $t$ goes from $2\pi$ to $0$.
+We have
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\oint_{C_\varepsilon}\frac{f(z)}{\zeta - z}\dif\zeta&amp;= f(z) \oint_{2 \pi}^{0}\frac{1}{e^{i t}} i e^{i t}\dif t \\&amp;= f(z) \oint_{0}^{2 \pi} i \dif t \\&amp;= - 2 \pi i f(z)
+	\end{split}\]</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>In summary,
+</pre></div>
+</div>
+<div class="math notranslate nohighlight" id="equation-eq-11">
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-eq-11" title="Link to this equation">#</a></span>\[\lim_{\varepsilon \to 0}\oint_{C_\varepsilon} g(\zeta) \dif\zeta = - 2 \pi i f(z)
+		\]</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Letting $\varepsilon \to 0$ in {eq}`eq:10` and plugging in {eq}`eq:11`, 
+we obtain
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\oint_C g(\zeta) \dif\zeta - 2 \pi i f(z) = 0
+	\]</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>which is exactly what we wanted to show.
+</pre></div>
+</div>
+</div>
 <div class="proof theorem admonition" id="thm:1">
-<p class="admonition-title"><span class="caption-number">Theorem 3.3 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 3.4 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f\)</span> is holomorphic in an open set <span class="math notranslate nohighlight">\(\Omega\)</span>, and <span class="math notranslate nohighlight">\(D\)</span> is an open disk
 centered at <span class="math notranslate nohighlight">\(z_0\)</span> whose closure is contained in <span class="math notranslate nohighlight">\(\Omega\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> has a power
 series expansion at <span class="math notranslate nohighlight">\(z_0\)</span> in the form</p>
 <div class="math notranslate nohighlight" id="equation-eq-1">
-<span class="eqno">(3.4)<a class="headerlink" href="#equation-eq-1" title="Link to this equation">#</a></span>\[ f(z) = \sum_{n=0}^\infty\frac{f^{(n)}(z_0)}{n!}(z - z_0)^n \quad\forall z \in D
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-eq-1" title="Link to this equation">#</a></span>\[ f(z) = \sum_{n=0}^\infty\frac{f^{(n)}(z_0)}{n!}(z - z_0)^n \quad\forall z \in D
  \]</div>
 </section>
 </div><div class="proof theorem admonition" id="thm:2">
-<p class="admonition-title"><span class="caption-number">Theorem 3.4 </span> (Liouville’s Theorem)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 3.5 </span> (Liouville’s Theorem)</p>
 <section class="theorem-content" id="proof-content">
 </section>
 </div><div class="proof theorem admonition" id="thm:3">
-<p class="admonition-title"><span class="caption-number">Theorem 3.5 </span> (Fundamental Theorem of Algebra)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 3.6 </span> (Fundamental Theorem of Algebra)</p>
 <section class="theorem-content" id="proof-content">
 <p>Every polynomial with degree greater than <span class="math notranslate nohighlight">\(0\)</span> with complex coefficients has a
 root in <span class="math notranslate nohighlight">\(\C\)</span>.</p>
@@ -410,8 +508,8 @@ To do so, we are going to show <span class="math notranslate nohighlight">\(1 / 
 tend to <span class="math notranslate nohighlight">\(\abs{a_n}\)</span>.
 This implies that there exists <span class="math notranslate nohighlight">\(R &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-2">
-<span class="eqno">(3.5)<a class="headerlink" href="#equation-eq-2" title="Link to this equation">#</a></span>\[\abs{\frac{p(z)}{z^n}} &gt; \frac{\abs{a_n}}{2}\]</div>
-<p>whenever <span class="math notranslate nohighlight">\(\abs{z} &gt; R\)</span>. Rearranging <a class="reference internal" href="#equation-eq-2">(3.5)</a>, we have</p>
+<span class="eqno">(3.8)<a class="headerlink" href="#equation-eq-2" title="Link to this equation">#</a></span>\[\abs{\frac{p(z)}{z^n}} &gt; \frac{\abs{a_n}}{2}\]</div>
+<p>whenever <span class="math notranslate nohighlight">\(\abs{z} &gt; R\)</span>. Rearranging <a class="reference internal" href="#equation-eq-2">(3.8)</a>, we have</p>
 <div class="math notranslate nohighlight">
 \[\abs{\frac{1}{p(z)}} &lt; \frac{2}{\abs{a_n}}\cdot\frac{1}{\abs{z}^n} &lt; \frac{2}{\abs{a_n} R^n}\quad\text{if }\abs{z} &gt; R
  \]</div>
@@ -420,7 +518,7 @@ at <span class="math notranslate nohighlight">\(0\)</span> with radius <span cla
 <p>For points inside the closed disk <span class="math notranslate nohighlight">\(\overline{D}\)</span>, since function <span class="math notranslate nohighlight">\(\abs{1 / p(z)}\)</span> is
 continuous and <span class="math notranslate nohighlight">\(\overline{D}\)</span> is compact, <span class="math notranslate nohighlight">\(\abs{1 / p(z)}\)</span> attains its maximum <span class="math notranslate nohighlight">\(M\)</span> on <span class="math notranslate nohighlight">\(\overline{D}\)</span>.</p>
 <p>Therefore, we see that <span class="math notranslate nohighlight">\(1 / p(z)\)</span> is indeed bounded on entire complex plane <span class="math notranslate nohighlight">\(\C\)</span>.
-By Liouville’s theorem <a class="reference internal" href="#thm:2">Theorem 3.4</a>, <span class="math notranslate nohighlight">\(1 / p(z)\)</span> is constant, which leads to a
+By Liouville’s theorem <a class="reference internal" href="#thm:2">Theorem 3.5</a>, <span class="math notranslate nohighlight">\(1 / p(z)\)</span> is constant, which leads to a
 contradiction since polynomials with degree greater than <span class="math notranslate nohighlight">\(0\)</span> are non-constant.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -439,7 +537,7 @@ induction we can show that it actually has <span class="math notranslate nohighl
 <div class="math notranslate nohighlight">
 \[ p(z) = a_n (z^n - z_1) (z^n - z_2) \cdots(z^n - z_n)
 \]</div>
-<div class="proof corollary admonition" id="corollary-4">
+<div class="proof corollary admonition" id="corollary-5">
 <p class="admonition-title"><span class="caption-number">Corollary 3.2 </span></p>
 <section class="corollary-content" id="proof-content">
 <p>Every polynomial <span class="math notranslate nohighlight">\(p(z) = a_n z^n + \cdots + a_1 z + a_0\)</span> of degree <span class="math notranslate nohighlight">\(n \geq 1\)</span> with
@@ -453,15 +551,15 @@ denoted by <span class="math notranslate nohighlight">\(z_1, \ldots, z_n\)</span
 <p>Proof.  We shall prove by induction.</p>
 <p>\noindent <strong>Base Case:</strong>  Suppose <span class="math notranslate nohighlight">\(n = 1\)</span>, then <span class="math notranslate nohighlight">\(p(z) = a_1 z + a_0\)</span>(<span class="math notranslate nohighlight">\(a_1 \neq 0\)</span>). Setting <span class="math notranslate nohighlight">\(p(z) = 0\)</span>, we solve that <span class="math notranslate nohighlight">\(z = -a_0 / a_1\)</span>. Therefore, <span class="math notranslate nohighlight">\(z_1 = -a_0 / a_1\)</span> is the only root of <span class="math notranslate nohighlight">\(p(z)\)</span>, and we can write <span class="math notranslate nohighlight">\(p(z) = a_1(z - z_1)\)</span>.</p>
 <p>\noindent <strong>Inductive Step:</strong>  Assume this corollary holds for <span class="math notranslate nohighlight">\(n = k\)</span>, we need to show that it also holds for <span class="math notranslate nohighlight">\(n = k + 1\)</span>.
-By the Fundamental Theorem of Algebra <a class="reference internal" href="#thm:3">Theorem 3.5</a>, there exists one root <span class="math notranslate nohighlight">\(z_1\)</span> for <span class="math notranslate nohighlight">\(p(z)\)</span>.
+By the Fundamental Theorem of Algebra <a class="reference internal" href="#thm:3">Theorem 3.6</a>, there exists one root <span class="math notranslate nohighlight">\(z_1\)</span> for <span class="math notranslate nohighlight">\(p(z)\)</span>.
 We want to show that <span class="math notranslate nohighlight">\(p(z)\)</span> has a factor <span class="math notranslate nohighlight">\((z - z_1)\)</span>.
 Let <span class="math notranslate nohighlight">\(\tilde{p}(z) = p(z + z_1)\)</span>.
 Note that <span class="math notranslate nohighlight">\(\tilde{p}(z)\)</span> is also a polynomial of degree <span class="math notranslate nohighlight">\(k + 1\)</span>.
 Write</p>
 <div class="math notranslate nohighlight" id="equation-eq-3">
-<span class="eqno">(3.6)<a class="headerlink" href="#equation-eq-3" title="Link to this equation">#</a></span>\[\tilde{p}(z) = b_{k+1} z^{k+1} + \cdots + b_1 z + b_0
+<span class="eqno">(3.9)<a class="headerlink" href="#equation-eq-3" title="Link to this equation">#</a></span>\[\tilde{p}(z) = b_{k+1} z^{k+1} + \cdots + b_1 z + b_0
  \]</div>
-<p>Because <span class="math notranslate nohighlight">\(z_1\)</span> is a root of <span class="math notranslate nohighlight">\(p(z)\)</span>, we have <span class="math notranslate nohighlight">\(\tilde{p}(0) = p(z_1) = 0\)</span>. Substituting <span class="math notranslate nohighlight">\(z=0\)</span> into <a class="reference internal" href="#equation-eq-3">(3.6)</a> yields <span class="math notranslate nohighlight">\(b_0 = 0\)</span>.
+<p>Because <span class="math notranslate nohighlight">\(z_1\)</span> is a root of <span class="math notranslate nohighlight">\(p(z)\)</span>, we have <span class="math notranslate nohighlight">\(\tilde{p}(0) = p(z_1) = 0\)</span>. Substituting <span class="math notranslate nohighlight">\(z=0\)</span> into <a class="reference internal" href="#equation-eq-3">(3.9)</a> yields <span class="math notranslate nohighlight">\(b_0 = 0\)</span>.
 Therefore, we can write</p>
 <div class="math notranslate nohighlight">
 \[\tilde{p}(z) = z (b_{k+1} z^{k} + \cdots b_2 z + b_1)
@@ -481,14 +579,14 @@ We have</p>
 <p>And we realized that <span class="math notranslate nohighlight">\(c\)</span> is exactly <span class="math notranslate nohighlight">\(a_{k+1}\)</span> since it is the coefficient of <span class="math notranslate nohighlight">\(z^{k+1}\)</span>.
 Therefore, we have shown</p>
 <div class="math notranslate nohighlight" id="equation-eq-4">
-<span class="eqno">(3.7)<a class="headerlink" href="#equation-eq-4" title="Link to this equation">#</a></span>\[ p(z) = a_{k+1}(z - z_1) \cdots(z - z_{k+1})
+<span class="eqno">(3.10)<a class="headerlink" href="#equation-eq-4" title="Link to this equation">#</a></span>\[ p(z) = a_{k+1}(z - z_1) \cdots(z - z_{k+1})
  \]</div>
-<p><a class="reference internal" href="#equation-eq-4">(3.7)</a> tells us that <span class="math notranslate nohighlight">\(z_1, \ldots, z_{k+1}\)</span> are roots of <span class="math notranslate nohighlight">\(p(z)\)</span>.
-Moreover, <span class="math notranslate nohighlight">\(p(z)\)</span> cannot have any other roots. To see this, suppose <span class="math notranslate nohighlight">\(w \neq z_j \ \forall j=1, \ldots, k+1\)</span>. Then, substituting <span class="math notranslate nohighlight">\(z = w\)</span> in <a class="reference internal" href="#equation-eq-4">(3.7)</a>, we see that <span class="math notranslate nohighlight">\(p(w) \neq 0\)</span> since each factor is nonzero.</p>
+<p><a class="reference internal" href="#equation-eq-4">(3.10)</a> tells us that <span class="math notranslate nohighlight">\(z_1, \ldots, z_{k+1}\)</span> are roots of <span class="math notranslate nohighlight">\(p(z)\)</span>.
+Moreover, <span class="math notranslate nohighlight">\(p(z)\)</span> cannot have any other roots. To see this, suppose <span class="math notranslate nohighlight">\(w \neq z_j \ \forall j=1, \ldots, k+1\)</span>. Then, substituting <span class="math notranslate nohighlight">\(z = w\)</span> in <a class="reference internal" href="#equation-eq-4">(3.10)</a>, we see that <span class="math notranslate nohighlight">\(p(w) \neq 0\)</span> since each factor is nonzero.</p>
 </div>
 <p>The next theorem roughly demonstrates that the global behaviour of a holomorphic function is determined by its values on an appropriate small subset.</p>
-<div class="proof theorem admonition" id="theorem-5">
-<p class="admonition-title"><span class="caption-number">Theorem 3.6 </span></p>
+<div class="proof theorem admonition" id="theorem-6">
+<p class="admonition-title"><span class="caption-number">Theorem 3.7 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(f\)</span> is a holomorphic function in a connected open set <span class="math notranslate nohighlight">\(\Omega\)</span>, and vanishes on a sequence of distinct points whose limit is also in <span class="math notranslate nohighlight">\(\Omega\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> is constantly zero in <span class="math notranslate nohighlight">\(\Omega\)</span>.</p>
 <p>In other words, let <span class="math notranslate nohighlight">\(f\)</span> be a holomorphic function in a connected open set <span class="math notranslate nohighlight">\(\Omega\)</span>.
@@ -506,12 +604,12 @@ Since <span class="math notranslate nohighlight">\(f\)</span> is holomorphic in 
 Then we can find the first nonzero coefficient <span class="math notranslate nohighlight">\(a_m\)</span> in the expansion.
 Write</p>
 <div class="math notranslate nohighlight" id="equation-eq-5">
-<span class="eqno">(3.8)<a class="headerlink" href="#equation-eq-5" title="Link to this equation">#</a></span>\[\begin{split} f(z) &amp; = a_m(z - z_0)^m + \sum_{k=1}^\infty a_{m+k}(z - z_0)^{m+k}\nonumber\\&amp; = a_m(z - z_0)^m \left[
+<span class="eqno">(3.11)<a class="headerlink" href="#equation-eq-5" title="Link to this equation">#</a></span>\[\begin{split} f(z) &amp; = a_m(z - z_0)^m + \sum_{k=1}^\infty a_{m+k}(z - z_0)^{m+k}\nonumber\\&amp; = a_m(z - z_0)^m \left[
  1 + \sum_{k=1}^\infty\frac{a_{m+k}}{a_m}(z - z_0)^{k}\right]\end{split}\]</div>
 <p>Note that the term <span class="math notranslate nohighlight">\(\sum_{k=1}^\infty \frac{a_{m+k}}{a_m}  (z - z_0)^{k}\)</span> is a continuous function that vanishes at <span class="math notranslate nohighlight">\(z_0\)</span>.
 Hence, we may find a sufficiently small neighbourhood <span class="math notranslate nohighlight">\(N\)</span> of <span class="math notranslate nohighlight">\(z_0\)</span> such that <span class="math notranslate nohighlight">\(1 + \sum_{k=1}^\infty \frac{a_{m+k}}{a_m}  (z - z_0)^{k}\)</span> is nonzero in <span class="math notranslate nohighlight">\(N\)</span>.
 By the given condition, there exists a point <span class="math notranslate nohighlight">\(z_j\)</span> in the sequence such that <span class="math notranslate nohighlight">\(z_j \neq z_0\)</span> and <span class="math notranslate nohighlight">\(z_j \in N\)</span>.
-Plugging <span class="math notranslate nohighlight">\(z_j\)</span> into <a class="reference internal" href="#equation-eq-5">(3.8)</a>, we have</p>
+Plugging <span class="math notranslate nohighlight">\(z_j\)</span> into <a class="reference internal" href="#equation-eq-5">(3.11)</a>, we have</p>
 <div class="math notranslate nohighlight">
 \[ 0 = f(z_j) = a_m(z_j - z_0)^m \left[
  1 + \sum_{k=1}^\infty\frac{a_{m+k}}{a_m}(z_j - z_0)^{k}\right]\]</div>
