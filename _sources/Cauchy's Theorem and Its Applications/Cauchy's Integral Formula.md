@@ -81,13 +81,13 @@ Hence, letting $\delta \to 0$, {eq}`eq:9` becomes
 ```
 
 We now turn our focus to the contour integral on $C_\varepsilon$.
-Exploiting the fact that $f$, we can write 
+Exploiting the fact that $f$, we can write
 
 ```{math}
 
-g(\zeta) &= \frac{f(\zeta)}{\zeta - z}\\&= \frac{1}{\zeta - z}(
+g(\zeta) & = \frac{f(\zeta)}{\zeta - z}\\& = \frac{1}{\zeta - z}(
 f(z) + f^\prime(z) (\zeta - z) + \psi(\zeta)
-) \\&= \frac{f(z)}{\zeta - z} + \left[
+) \\& = \frac{f(z)}{\zeta - z} + \left[
 f^\prime(z) + \frac{\psi(\zeta)}{\zeta - z}\right]
 ```
 
@@ -95,15 +95,15 @@ where $\frac{\psi(\zeta)}{\zeta - z} \to 0$ as $\zeta \to z$.
 Note that the term $f^\prime(z) + \frac{\psi(\zeta)}{\zeta - z}$ is bounded
 in a sufficiently small neighborhood of $z$.
 Therefore, as $\varepsilon \to 0$, $\oint_{C_\varepsilon} f^\prime(\zeta) + \frac{\psi(\zeta)}{\zeta - z} \dif \zeta \to 0$.
-Hence, the only $\frac{f(z)}{\zeta - z}$ will contribute to 
+Hence, the only $\frac{f(z)}{\zeta - z}$ will contribute to
 the integral as $\varepsilon \to 0$.
-Let the negatively oriented 
+Let the negatively oriented
 circle $C_\varepsilon$ be the parametrized by $\zeta(t) = z + e^{i t}$
 where $t$ goes from $2\pi$ to $0$.
 We have
 
 ```{math}
-\oint_{C_\varepsilon}\frac{f(z)}{\zeta - z}\dif\zeta&= f(z) \oint_{2 \pi}^{0}\frac{1}{e^{i t}} i e^{i t}\dif t \\&= f(z) \oint_{0}^{2 \pi} i \dif t \\&= - 2 \pi i f(z)
+\oint_{C_\varepsilon}\frac{f(z)}{\zeta - z}\dif\zeta& = f(z) \oint_{2 \pi}^{0}\frac{1}{e^{i t}} i e^{i t}\dif t \\& = -f(z) \oint_{0}^{2 \pi} i \dif t \\& = - 2 \pi i f(z)
 
 ```
 
@@ -115,7 +115,7 @@ In summary,
 
 ```
 
-Letting $\varepsilon \to 0$ in {eq}`eq:10` and plugging in {eq}`eq:11`, 
+Letting $\varepsilon \to 0$ in {eq}`eq:10` and plugging in {eq}`eq:11`,
 we obtain
 
 ```{math}
@@ -145,6 +145,8 @@ f(z) = \sum_{n=0}^\infty\frac{f^{(n)}(z_0)}{n!}(z - z_0)^n \quad\forall z \in D
 
 ````{prf:theorem} Liouville's Theorem
 :label: thm:2
+
+Let $f$ be an entire function.
 
 ````
 
