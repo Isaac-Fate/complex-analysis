@@ -127,6 +127,111 @@ which is exactly what we wanted to show.
 
 ````
 
+````{prf:corollary} 
+:label: eq:12
+
+If $f$ is a holomorphic function in $\Omega$,
+then $f$ is complex differentiable infinitely many times
+in $\Omega$.
+Moreover, if $D \subseteq \Omega$
+is disk whose closure $\overline{D}$ is also contained in $\Omega$,
+then the $n$-th derivative of $f$ is given by
+
+```{math}
+:label: eq:12
+
+f^{(n)}(z) = \frac{n!}{2 \pi i}\oint_C \frac{f(\zeta)}{(\zeta - z)^{n+1}}\dif\zeta, \quad\forall z \in D
+
+```
+
+where $C = \partial D$ is the positively oriented circle boundary of $D$.
+
+````
+
+````{prf:proof}
+
+We shall prove by induction on $n$.
+The induction hypothesis is
+that $f$ has $n$-th derivative everywhere in $\Omega$
+and it is given by {eq}`eq:12` for all $n \in \N^\ast$.
+
+\noindent **Base Case:**  The conclusion immediately follows
+from {prf:ref}`thm:1` when $n=1$.
+
+\noindent **Inductive Step:**  Assume {eq}`eq:12` holds
+for $n=k$. We will show that it also holds for $n=k+1$.
+By the induction hypothesis, now it is given that $f$ has $k$-th order derivative
+everywhere in $\Omega$ and the derivative is given by {eq}`eq:12`.
+
+Pick a closed disk $\overline{D} \subseteq \Omega$ and a point $z$ in it.
+By the definition of complex derivatives, we consider the quotient
+
+```{math}
+:label: eq:13
+\frac{f^{(k)}(z+h) - f^{(k)}(z)}{h}
+= \frac{k!}{2 \pi i}\cdot\frac{1}{h}\oint_C f(\zeta) \left(\frac{1}{(\zeta - z - h)^{k+1}} - \frac{1}{(\zeta - z)^{k+1}}\right)\dif\zeta
+```
+
+Using the formula
+
+```{math}
+
+A^m - B^m = (A - B) \sum_{j=0}^{m-1} A^{m-j-1} B^j
+
+```
+
+the term in the integrand of {eq}`eq:13` can be simplified to
+
+```{math}
+:label: eq:14
+\frac{1}{(\zeta - z - h)^{k+1}} - \frac{1}{(\zeta - z)^{k+1}}& = \left(\frac{1}{\zeta - z - h} - \frac{1}{\zeta - z}\right)\sum_{j=0}^{k}\frac{1}{(\zeta - z - h)^{k-j} (\zeta - z)^j}\nonumber\\& = \frac{h}{(\zeta - z - h)(\zeta - z)}\sum_{j=0}^{k}\frac{1}{(\zeta - z - h)^{k-j} (\zeta - z)^j}
+```
+
+Substituting {eq}`eq:14` into {eq}`eq:13` gives
+
+```{math}
+:label: eq:15
+\frac{f^{(k)}(z+h) - f^{(k)}(z)}{h}
+= \frac{k!}{2 \pi i}\oint_C f(\zeta)
+\frac{1}{(\zeta - z - h)(\zeta - z)}\sum_{j=0}^{k}\frac{1}{(\zeta - z - h)^{k-j} (\zeta - z)^j}\dif\zeta
+```
+
+Now, taking letting $h \to 0$ on both sides of {eq}`eq:15`,
+we observe that $(\zeta - z - h) \to (\zeta - z)$.
+
+
+:::{note}
+
+Here, we will interchange the order of $\lim_{h \to 0}$ and $\oint_C$.
+One should verify that this is indeed allowed and
+the limit on the right-hand side of {eq}`eq:15` exists.
+The approximation
+
+```{math}
+\abs{\frac{1}{(z+h)^p} - \frac{1}{z^p}}\leq\abs{h}\frac{p 2^p}{\abs{z}^{p+1}},
+\quad p \in\N^\ast\text{ and $h$ is sufficiently small}
+```
+
+maybe helpful.
+
+:::
+
+Hence, {eq}`eq:15` yields
+
+```{math}
+\lim_{h \to 0}\frac{f^{(k)}(z+h) - f^{(k)}(z)}{h}
+= \frac{k!}{2 \pi i}\oint_C f(\zeta)
+\frac{1}{(\zeta - z)^2}\frac{k+1}{(\zeta - z)^{k}}\dif\zeta
+= \frac{(k+1)!}{2 \pi i}\oint_C
+\frac{f(\zeta)}{(\zeta - z)^{k+2}}\dif\zeta
+```
+
+which exactly {eq}`eq:12` when $n=k+1$.
+And we can show that $f$ has $k+1$-th order derivative everywhere in $\Omega$.
+This completes the proof.
+
+````
+
 ````{prf:theorem} 
 :label: thm:1
 
