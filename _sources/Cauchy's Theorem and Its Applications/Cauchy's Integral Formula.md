@@ -128,7 +128,7 @@ which is exactly what we wanted to show.
 ````
 
 ````{prf:corollary} 
-:label: eq:12
+:label: cor:2
 
 If $f$ is a holomorphic function in $\Omega$,
 then $f$ is complex differentiable infinitely many times
@@ -227,7 +227,7 @@ Hence, {eq}`eq:15` yields
 ```
 
 which exactly {eq}`eq:12` when $n=k+1$.
-And we can show that $f$ has $k+1$-th order derivative everywhere in $\Omega$.
+And we can show that $f$ has ($k+1$)-th order derivative everywhere in $\Omega$.
 This completes the proof.
 
 ````
@@ -245,6 +245,44 @@ series expansion at $z_0$ in the form
 f(z) = \sum_{n=0}^\infty\frac{f^{(n)}(z_0)}{n!}(z - z_0)^n \quad\forall z \in D
 
 ```
+
+````
+
+````{prf:proof}
+
+The key of this proof is applying term-by-term integration.
+By Cauchy's integral formula {prf:ref}`cor:2`, the $n$-th derivative of $f$ at $z_0$
+is given by
+
+```{math}
+:label: eq:16
+
+f^{(n)}(z_0) = \frac{n!}{2 \pi i}\oint_{C}\frac{f(\zeta)}{(\zeta - z_0)^{n+1}}\dif\zeta
+```
+
+Comparing to the equation {eq}`eq:1` we want to prove,
+we need to sum up the terms $\frac{f^{(n)} (z_0)}{n!} (z - z_0)^n$.
+By {eq}`eq:16`, we have
+
+```{math}
+\sum_{n=0}^\infty\frac{f^{(n)} (z_0)}{n!}(z - z_0)^n
+& = \sum_{n=0}^\infty\frac{1}{2 \pi i}\oint_C \frac{f(\zeta)}{\zeta - z_0}\left(\frac{z - z_0}{\zeta - z_0}\right)^n \dif\zeta\\& = \frac{1}{2 \pi i}\oint_C \frac{f(\zeta)}{\zeta - z_0}\sum_{n=0}^{\infty}\left(\frac{z - z_0}{\zeta - z_0}\right)^n \dif\zeta\\& = \frac{1}{2 \pi i}\oint_C \frac{f(\zeta)}{\zeta - z_0}\frac{1}{1 - \frac{z-z_0}{\zeta - z_0}}\dif\zeta\\& = \frac{1}{2 \pi i}\oint_C \frac{f(\zeta)}{\zeta - z}\dif\zeta\\& = f(z)
+
+```
+
+In the above equations, we note that $\abs{z -z_0} < \abs{\zeta - z_0}$,
+and the last equality follows from {prf:ref}`thm:5`.
+
+:::{note}
+
+To apply the term-by-term integration rule, i.e.,
+interchanging $\sum_{n=0}^\infty$ and $\oint_C$ in this case,
+we neeed to verify that the integrand (a function of $\zeta$)
+converges uniformly on $C$.
+
+:::
+
+This completes the proof.
 
 ````
 

@@ -458,7 +458,7 @@ we obtain</p>
 \]</div>
 <p>which is exactly what we wanted to show.</p>
 </div>
-<div class="proof corollary admonition" id="eq:12">
+<div class="proof corollary admonition" id="cor:2">
 <p class="admonition-title"><span class="caption-number">Corollary 3.2 </span></p>
 <section class="corollary-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(f\)</span> is a holomorphic function in <span class="math notranslate nohighlight">\(\Omega\)</span>,
@@ -520,7 +520,7 @@ The approximation</p>
 = \frac{(k+1)!}{2 \pi i}\oint_C
 \frac{f(\zeta)}{(\zeta - z)^{k+2}}\dif\zeta\]</div>
 <p>which exactly <a class="reference internal" href="#equation-eq-12">(3.7)</a> when <span class="math notranslate nohighlight">\(n=k+1\)</span>.
-And we can show that <span class="math notranslate nohighlight">\(f\)</span> has <span class="math notranslate nohighlight">\(k+1\)</span>-th order derivative everywhere in <span class="math notranslate nohighlight">\(\Omega\)</span>.
+And we can show that <span class="math notranslate nohighlight">\(f\)</span> has (<span class="math notranslate nohighlight">\(k+1\)</span>)-th order derivative everywhere in <span class="math notranslate nohighlight">\(\Omega\)</span>.
 This completes the proof.</p>
 </div>
 <div class="proof theorem admonition" id="thm:1">
@@ -532,7 +532,31 @@ series expansion at <span class="math notranslate nohighlight">\(z_0\)</span> in
 <div class="math notranslate nohighlight" id="equation-eq-1">
 <span class="eqno">(3.11)<a class="headerlink" href="#equation-eq-1" title="Permalink to this equation">#</a></span>\[f(z) = \sum_{n=0}^\infty\frac{f^{(n)}(z_0)}{n!}(z - z_0)^n \quad\forall z \in D\]</div>
 </section>
-</div><div class="proof theorem admonition" id="thm:2">
+</div><div class="proof admonition" id="proof">
+<p>Proof. The key of this proof is applying term-by-term integration.
+By Cauchy’s integral formula <a class="reference internal" href="#cor:2">Corollary 3.2</a>, the <span class="math notranslate nohighlight">\(n\)</span>-th derivative of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(z_0\)</span>
+is given by</p>
+<div class="math notranslate nohighlight" id="equation-eq-16">
+<span class="eqno">(3.12)<a class="headerlink" href="#equation-eq-16" title="Permalink to this equation">#</a></span>\[f^{(n)}(z_0) = \frac{n!}{2 \pi i}\oint_{C}\frac{f(\zeta)}{(\zeta - z_0)^{n+1}}\dif\zeta\]</div>
+<p>Comparing to the equation <a class="reference internal" href="#equation-eq-1">(3.11)</a> we want to prove,
+we need to sum up the terms <span class="math notranslate nohighlight">\(\frac{f^{(n)} (z_0)}{n!} (z - z_0)^n\)</span>.
+By <a class="reference internal" href="#equation-eq-16">(3.12)</a>, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\sum_{n=0}^\infty\frac{f^{(n)} (z_0)}{n!}(z - z_0)^n
+&amp; = \sum_{n=0}^\infty\frac{1}{2 \pi i}\oint_C \frac{f(\zeta)}{\zeta - z_0}\left(\frac{z - z_0}{\zeta - z_0}\right)^n \dif\zeta\\&amp; = \frac{1}{2 \pi i}\oint_C \frac{f(\zeta)}{\zeta - z_0}\sum_{n=0}^{\infty}\left(\frac{z - z_0}{\zeta - z_0}\right)^n \dif\zeta\\&amp; = \frac{1}{2 \pi i}\oint_C \frac{f(\zeta)}{\zeta - z_0}\frac{1}{1 - \frac{z-z_0}{\zeta - z_0}}\dif\zeta\\&amp; = \frac{1}{2 \pi i}\oint_C \frac{f(\zeta)}{\zeta - z}\dif\zeta\\&amp; = f(z)
+\end{split}\]</div>
+<p>In the above equations, we note that <span class="math notranslate nohighlight">\(\abs{z -z_0} &lt; \abs{\zeta - z_0}\)</span>,
+and the last equality follows from <a class="reference internal" href="#thm:5">Theorem 3.3</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To apply the term-by-term integration rule, i.e.,
+interchanging <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty\)</span> and <span class="math notranslate nohighlight">\(\oint_C\)</span> in this case,
+we neeed to verify that the integrand (a function of <span class="math notranslate nohighlight">\(\zeta\)</span>)
+converges uniformly on <span class="math notranslate nohighlight">\(C\)</span>.</p>
+</div>
+<p>This completes the proof.</p>
+</div>
+<div class="proof theorem admonition" id="thm:2">
 <p class="admonition-title"><span class="caption-number">Theorem 3.5 </span> (Liouville’s Theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> be an entire function.</p>
@@ -563,8 +587,8 @@ To do so, we are going to show <span class="math notranslate nohighlight">\(1 / 
 tend to <span class="math notranslate nohighlight">\(\abs{a_n}\)</span>.
 This implies that there exists <span class="math notranslate nohighlight">\(R &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-2">
-<span class="eqno">(3.12)<a class="headerlink" href="#equation-eq-2" title="Permalink to this equation">#</a></span>\[\abs{\frac{p(z)}{z^n}} &gt; \frac{\abs{a_n}}{2}\]</div>
-<p>whenever <span class="math notranslate nohighlight">\(\abs{z} &gt; R\)</span>. Rearranging <a class="reference internal" href="#equation-eq-2">(3.12)</a>, we have</p>
+<span class="eqno">(3.13)<a class="headerlink" href="#equation-eq-2" title="Permalink to this equation">#</a></span>\[\abs{\frac{p(z)}{z^n}} &gt; \frac{\abs{a_n}}{2}\]</div>
+<p>whenever <span class="math notranslate nohighlight">\(\abs{z} &gt; R\)</span>. Rearranging <a class="reference internal" href="#equation-eq-2">(3.13)</a>, we have</p>
 <div class="math notranslate nohighlight">
 \[\abs{\frac{1}{p(z)}} &lt; \frac{2}{\abs{a_n}}\cdot\frac{1}{\abs{z}^n} &lt; \frac{2}{\abs{a_n} R^n}\quad\text{if }\abs{z} &gt; R
 \]</div>
@@ -612,8 +636,8 @@ Let <span class="math notranslate nohighlight">\(\tilde{p}(z) = p(z + z_1)\)</sp
 Note that <span class="math notranslate nohighlight">\(\tilde{p}(z)\)</span> is also a polynomial of degree <span class="math notranslate nohighlight">\(k + 1\)</span>.
 Write</p>
 <div class="math notranslate nohighlight" id="equation-eq-3">
-<span class="eqno">(3.13)<a class="headerlink" href="#equation-eq-3" title="Permalink to this equation">#</a></span>\[\tilde{p}(z) = b_{k+1} z^{k+1} + \cdots + b_1 z + b_0\]</div>
-<p>Because <span class="math notranslate nohighlight">\(z_1\)</span> is a root of <span class="math notranslate nohighlight">\(p(z)\)</span>, we have <span class="math notranslate nohighlight">\(\tilde{p}(0) = p(z_1) = 0\)</span>. Substituting <span class="math notranslate nohighlight">\(z=0\)</span> into <a class="reference internal" href="#equation-eq-3">(3.13)</a> yields <span class="math notranslate nohighlight">\(b_0 = 0\)</span>.
+<span class="eqno">(3.14)<a class="headerlink" href="#equation-eq-3" title="Permalink to this equation">#</a></span>\[\tilde{p}(z) = b_{k+1} z^{k+1} + \cdots + b_1 z + b_0\]</div>
+<p>Because <span class="math notranslate nohighlight">\(z_1\)</span> is a root of <span class="math notranslate nohighlight">\(p(z)\)</span>, we have <span class="math notranslate nohighlight">\(\tilde{p}(0) = p(z_1) = 0\)</span>. Substituting <span class="math notranslate nohighlight">\(z=0\)</span> into <a class="reference internal" href="#equation-eq-3">(3.14)</a> yields <span class="math notranslate nohighlight">\(b_0 = 0\)</span>.
 Therefore, we can write</p>
 <div class="math notranslate nohighlight">
 \[\tilde{p}(z) = z (b_{k+1} z^{k} + \cdots b_2 z + b_1)
@@ -633,9 +657,9 @@ We have</p>
 <p>And we realized that <span class="math notranslate nohighlight">\(c\)</span> is exactly <span class="math notranslate nohighlight">\(a_{k+1}\)</span> since it is the coefficient of <span class="math notranslate nohighlight">\(z^{k+1}\)</span>.
 Therefore, we have shown</p>
 <div class="math notranslate nohighlight" id="equation-eq-4">
-<span class="eqno">(3.14)<a class="headerlink" href="#equation-eq-4" title="Permalink to this equation">#</a></span>\[p(z) = a_{k+1}(z - z_1) \cdots(z - z_{k+1})\]</div>
-<p><a class="reference internal" href="#equation-eq-4">(3.14)</a> tells us that <span class="math notranslate nohighlight">\(z_1, \ldots, z_{k+1}\)</span> are roots of <span class="math notranslate nohighlight">\(p(z)\)</span>.
-Moreover, <span class="math notranslate nohighlight">\(p(z)\)</span> cannot have any other roots. To see this, suppose <span class="math notranslate nohighlight">\(w \neq z_j \ \forall j=1, \ldots, k+1\)</span>. Then, substituting <span class="math notranslate nohighlight">\(z = w\)</span> in <a class="reference internal" href="#equation-eq-4">(3.14)</a>, we see that <span class="math notranslate nohighlight">\(p(w) \neq 0\)</span> since each factor is nonzero.</p>
+<span class="eqno">(3.15)<a class="headerlink" href="#equation-eq-4" title="Permalink to this equation">#</a></span>\[p(z) = a_{k+1}(z - z_1) \cdots(z - z_{k+1})\]</div>
+<p><a class="reference internal" href="#equation-eq-4">(3.15)</a> tells us that <span class="math notranslate nohighlight">\(z_1, \ldots, z_{k+1}\)</span> are roots of <span class="math notranslate nohighlight">\(p(z)\)</span>.
+Moreover, <span class="math notranslate nohighlight">\(p(z)\)</span> cannot have any other roots. To see this, suppose <span class="math notranslate nohighlight">\(w \neq z_j \ \forall j=1, \ldots, k+1\)</span>. Then, substituting <span class="math notranslate nohighlight">\(z = w\)</span> in <a class="reference internal" href="#equation-eq-4">(3.15)</a>, we see that <span class="math notranslate nohighlight">\(p(w) \neq 0\)</span> since each factor is nonzero.</p>
 </div>
 <p>The next theorem roughly demonstrates that the global behaviour of a holomorphic function is determined by its values on an appropriate small subset.</p>
 <div class="proof theorem admonition" id="theorem-7">
@@ -657,12 +681,12 @@ Since <span class="math notranslate nohighlight">\(f\)</span> is holomorphic in 
 Then we can find the first nonzero coefficient <span class="math notranslate nohighlight">\(a_m\)</span> in the expansion.
 Write</p>
 <div class="math notranslate nohighlight" id="equation-eq-5">
-<span class="eqno">(3.15)<a class="headerlink" href="#equation-eq-5" title="Permalink to this equation">#</a></span>\[\begin{split}f(z) &amp; = a_m(z - z_0)^m + \sum_{k=1}^\infty a_{m+k}(z - z_0)^{m+k}\nonumber\\&amp; = a_m(z - z_0)^m \left[
+<span class="eqno">(3.16)<a class="headerlink" href="#equation-eq-5" title="Permalink to this equation">#</a></span>\[\begin{split}f(z) &amp; = a_m(z - z_0)^m + \sum_{k=1}^\infty a_{m+k}(z - z_0)^{m+k}\nonumber\\&amp; = a_m(z - z_0)^m \left[
 1 + \sum_{k=1}^\infty\frac{a_{m+k}}{a_m}(z - z_0)^{k}\right]\end{split}\]</div>
 <p>Note that the term <span class="math notranslate nohighlight">\(\sum_{k=1}^\infty \frac{a_{m+k}}{a_m}  (z - z_0)^{k}\)</span> is a continuous function that vanishes at <span class="math notranslate nohighlight">\(z_0\)</span>.
 Hence, we may find a sufficiently small neighbourhood <span class="math notranslate nohighlight">\(N\)</span> of <span class="math notranslate nohighlight">\(z_0\)</span> such that <span class="math notranslate nohighlight">\(1 + \sum_{k=1}^\infty \frac{a_{m+k}}{a_m}  (z - z_0)^{k}\)</span> is nonzero in <span class="math notranslate nohighlight">\(N\)</span>.
 By the given condition, there exists a point <span class="math notranslate nohighlight">\(z_j\)</span> in the sequence such that <span class="math notranslate nohighlight">\(z_j \neq z_0\)</span> and <span class="math notranslate nohighlight">\(z_j \in N\)</span>.
-Plugging <span class="math notranslate nohighlight">\(z_j\)</span> into <a class="reference internal" href="#equation-eq-5">(3.15)</a>, we have</p>
+Plugging <span class="math notranslate nohighlight">\(z_j\)</span> into <a class="reference internal" href="#equation-eq-5">(3.16)</a>, we have</p>
 <div class="math notranslate nohighlight">
 \[0 = f(z_j) = a_m(z_j - z_0)^m \left[
 1 + \sum_{k=1}^\infty\frac{a_{m+k}}{a_m}(z_j - z_0)^{k}\right]\]</div>
